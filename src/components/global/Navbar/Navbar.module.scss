@@ -1,0 +1,36 @@
+@import "../../../styles/mixins";
+@import "../../../styles/vars";
+
+.navbar {
+  @include flexCol(space-between);
+  background-color: #010c10;
+  padding: 25px;
+
+  &__avatarImg {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+  }
+
+  &__menu {
+    @include flexCol();
+    gap: 32px;
+  }
+
+  &__menuLink {
+    @include setFont(16px, 500, $font-family, $color-lightGrey);
+    text-decoration: none;
+
+    &:hover,
+    &_active {
+      color: $color-white;
+    }
+  }
+
+  &__menuBtn {
+    width: 29px;
+    height: 29px;
+    @include setFont(25px, 500, $font-family, $color-white);
+    background-color: #13343b;
+  }
+}
