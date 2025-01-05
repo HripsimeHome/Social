@@ -1,5 +1,5 @@
 import {
-    allPagePath, 
+    homePagePath, 
     musicPagePath,
     educationPagePath,
     technologyPagePath,
@@ -9,7 +9,7 @@ import {
 export const menuItems = [ 
 
     {
-        link: allPagePath,
+        link: homePagePath,
         text: "All",  
     },
 

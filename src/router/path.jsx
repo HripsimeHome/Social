@@ -1,7 +1,7 @@
 import { ReactElement } from "react";
 
 import HomePage from "../pages/HomePage";
-import AllPage from "../pages/AllPage";
+import SinglePage from "../pages/SinglePage";
 import MusicPage from "../pages/MusicPage";
 import EducationPage from "../pages/EducationPage";
 import TechnologyPage from "../pages/TechnologyPage";
@@ -9,7 +9,7 @@ import AIPage from "../pages/AIPage";
 import ErrorPage from "../pages/ErrorPage";
 
 export const homePagePath = "/";
-export const allPagePath = "/all";
+export const singlePagePath = "/singlePage";
 export const musicPagePath = "/music";
 export const educationPagePath = "/education";
 export const technologyPagePath = "/technology";
@@ -21,21 +21,20 @@ interface IRoute {
   children?: Omit<IRoute, "children">[];
 }
 
-export const routes: IRoute[] = [
-  /* {
+export const routes = [
+  {
     path: homePagePath,
     component: <HomePage />,
-  },
-  */
+  }, 
 
-  {
-    path: allPagePath,
-    component: <AllPage />,
+  {   
+    path: singlePagePath,
+    component: <SinglePage />,
   },
 
   {
     path: musicPagePath,
-    component: <MusicPage />,
+    component: <MusicPage />,    
   },
 
   {
