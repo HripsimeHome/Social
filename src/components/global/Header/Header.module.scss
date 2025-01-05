@@ -1,9 +1,31 @@
 @import "../../../styles/mixins";
 @import "../../../styles/vars";
 
-.header {
- // width: 100px;
+.header { 
   @include flexCol(space-between);
+
+  @include mdScreenMedia {
+    display: block;
+  }
+
+  &__logoPosition {
+    position: relative;
+  }
+
+  &__menuBtn {
+    position: absolute;
+    top: 8px;
+    right: 16px;
+    width: 29px;
+    height: 29px;
+    @include setFont(25px, 500, $font-family, $color-white);
+    background-color: #13343b;
+    border-radius: 50%;  
+
+    @media (min-width: 577px) {
+      display: none;
+    }     
+  }
 
   &__logo {
     @include setFont(32px, 800, $font-family, $color-primary);

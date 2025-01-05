@@ -18,8 +18,7 @@ const Navbar = () => {
 
         <nav className={styles.navbar__menu}>
           {menuItems.map(({ link, text }, index) => (
-            <NavLink to={link} key={index} className={styles.navbar__menuLink}>
-              
+            <NavLink to={link} key={index} className={styles.navbar__menuLink}>              
               {text}
             </NavLink>
           ))}

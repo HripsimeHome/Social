@@ -5,7 +5,12 @@ const Header = () => {
   return (
     <>
       <header className={styles.header}>
-        <span className={styles.header__logo}>CROWNDING</span>
+        <div className={styles.header__logoPosition}>
+          <span className={styles.header__logo}>CROWNDING</span>
+          <button className={styles.header__menuBtn}>+</button>
+        </div>
+
+       
       <Navbar />
       </header>
     </>
