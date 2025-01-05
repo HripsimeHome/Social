@@ -2,19 +2,37 @@
 @import "../../../styles/vars";
 
 .navbar {
-  @include flexCol(space-between);
+  max-width: 625px;
+  @include flexCol();
   background-color: #010c10;
-  padding: 25px;
+  //background-color: green;
+  padding: 60px 25px;
+
+  @include smScreenMedia {
+    flex-wrap: wrap;
+    padding: 30px 0;
+  }
 
   &__avatarImg {
     width: 50px;
     height: 50px;
     border-radius: 50%;
+
+    @include mdScreenMedia {
+      display: none;      
+    }
+  
   }
 
   &__menu {
     @include flexCol();
     gap: 32px;
+    margin: 0 66px;
+
+    @include mdScreenMedia {     
+      gap: 20px;
+    }
+  
   }
 
   &__menuLink {
@@ -33,5 +51,9 @@
     @include setFont(25px, 500, $font-family, $color-white);
     background-color: #13343b;
     border-radius: 50%;
+
+    @include smScreenMedia {     
+      display: none;
+    }
   }
 }
