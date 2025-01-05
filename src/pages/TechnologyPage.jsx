@@ -1,7 +1,11 @@
 import React from "react";
+import TechnologyMain from "../components/TechnologyPage/TechnologyMain/TechnologyMain";
 
 const TechnologyPage = () => {
-  return <div></div>;
-};
-
-export default TechnologyPage;
+  return (
+    <>
+      <TechnologyMain />
+    </>
+  );
+}
+export default TechnologyPage

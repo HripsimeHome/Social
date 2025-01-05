@@ -1,7 +1,11 @@
 import React from "react";
+import EducationMain from "../components/EducationPage/EducationMain/EducationMain";
 
-const EducationPage = () => {
-  return <div></div>;
-};
-
-export default EducationPage;
+const TechnologyPage = () => {
+  return (
+    <>
+      <EducationMain />
+    </>
+  );
+}
+export default TechnologyPage
