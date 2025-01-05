@@ -2,7 +2,8 @@
 @import "../../../styles/vars";
 
 .header {
-  width: 100px;
+ // width: 100px;
+  @include flexCol(space-between);
 
   &__logo {
     @include setFont(32px, 800, $font-family, $color-primary);

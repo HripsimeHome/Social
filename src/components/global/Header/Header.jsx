@@ -1,11 +1,13 @@
-import Navbar from "../Navbar/Navbar";
 import styles from "./Header.module.scss";
+import Navbar from "../Navbar/Navbar";
 
 const Header = () => {
   return (
     <>
-      <header className={styles.header}>CROWNDING</header>
+      <header className={styles.header}>
+        <span className={styles.header__logo}>CROWNDING</span>
       <Navbar />
+      </header>
     </>
   );
 };
