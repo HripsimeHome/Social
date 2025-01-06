@@ -111,6 +111,9 @@
     background-image: url($srcSet);
   }
 }
+// .class {
+//   @include bgWebp("../../assets/images/all/example.png","../../assets/images/all/example.webp")
+// }
 
 @mixin setDistance($distance, $prop: margin-bottom) {
   @if ($distance == 120) {

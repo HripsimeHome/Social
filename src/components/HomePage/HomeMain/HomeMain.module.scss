@@ -1,21 +1,40 @@
 @import "../../../styles/mixins";
 @import "../../../styles/vars";
 
-.allMain {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 60px;
+.homeMain {
+  &__cardContainer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 60px;
 
-  @include mdScreenMedia {
-    grid-template-columns: repeat(2, 1fr);
-  }
+    @include mdScreenMedia {
+      grid-template-columns: repeat(2, 1fr);
+    }
 
-  @include smScreenMedia {
-    grid-template-columns: repeat(1, 1fr);
-  }
-  &__card {
-    width: 430px;
-    height: 328px;
-    @include flexCol();
-  }
+    @include smScreenMedia {
+      grid-template-columns: repeat(1, 1fr);
+    }
+
+    &__card {
+      max-width: 430px;
+      height: 328px;
+      @include flexCol(space-between);      
+      flex-wrap: wrap;
+      flex-direction: column; 
+      align-content: space-between;
+      
+      //background-color: black;
+      @include bgWebp("../../../assets/images/home/videogame1.jpg","../../../assets/images/home/videogame1.webp");
+      border-radius: 32px;
+      padding: 24px 24px 24px 16px;      
+     
+
+    &_item {
+      background: lightblue;
+    
+    
+    
+    }
+    }
+}
 }
