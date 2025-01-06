@@ -4,7 +4,7 @@ const EducationMain = () => {
   return (
     <>
       <section className={styles.musicMain}>
-      Education page
+      Education
       </section>
     </>
   );
