@@ -1,6 +1,7 @@
 import styles from "./Header.module.scss";
 import Navbar from "../Navbar/Navbar";
 
+
 const Header = () => {
   return (
     <>
@@ -9,7 +10,6 @@ const Header = () => {
           <span className={styles.header__logo}>CROWNDING</span>
           <button className={styles.header__menuBtn}>+</button>
         </div>
-
        
       <Navbar />
       </header>
