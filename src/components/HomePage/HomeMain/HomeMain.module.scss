@@ -2,6 +2,8 @@
 @import "../../../styles/vars";
 
 .homeMain {
+ 
+  
   &__cardContainer {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -21,20 +23,70 @@
       @include flexCol(space-between);      
       flex-wrap: wrap;
       flex-direction: column; 
-      align-content: space-between;
+      align-content: space-between;    
       
-      //background-color: black;
       @include bgWebp("../../../assets/images/home/videogame1.jpg","../../../assets/images/home/videogame1.webp");
       border-radius: 32px;
       padding: 24px 24px 24px 16px;      
      
 
     &_item {
-      background: lightblue;
-    
-    
+      //background: lightblue;  
     
     }
+    &_gameInfo {      
+      width: 280px;
+      @include flexCol(space-between, flex-start); 
+      
     }
+
+    &_gameNameBlock {      
+      display: flex;
+     // align-items: left;
+      flex-direction: column;      
+    }
+
+    &_gameName {      
+      @include setFont(22px, 700, $font-family, $color-primary);   
+    }
+    &_videogame {      
+      @include setFont(12px, 600, $font-family, $color-softGrey);   
+      text-transform: uppercase;
+    }
+    &_position {      
+      @include setFont(14px, 700, $font-family, $color-lightGreen);  
+      background: rgba(199, 254, 98, 0.2);
+      text-transform: uppercase;
+      border-radius: 8px;
+      padding: 4px 8px;
+    }
+
+
+
+
+
+    &_gameStatus {
+      //background: lightblue;  
+      @include flexCol(space-between); 
+      background-color: olive;
+    }
+    
+    }
+
+
+    &__card2 {
+      max-width: 430px;
+      height: 328px;
+      @include flexCol(space-between);      
+      flex-wrap: wrap;
+      flex-direction: column; 
+      align-content: space-between;    
+      
+      @include bgWebp("../../../assets/images/home/videogame2.jpg","../../../assets/images/home/videogame2.webp");
+      border-radius: 32px;
+      padding: 24px 24px 24px 16px;   
+    }
+
+
 }
 }
