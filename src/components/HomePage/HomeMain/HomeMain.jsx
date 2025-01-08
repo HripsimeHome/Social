@@ -27,8 +27,19 @@ const HomeMain = () => {
 
 
             <div className={styles.homeMain__cardContainer__card_item}>
-            game status
+
+              <div className={styles.homeMain__funded}>
+                <span>
+                funded
+                </span>
+                <span>
+                15 backers
+                </span>
+              </div>
+              <span >34 days to go</span>
+
             </div>
+
           </div> {/* //card*/}
 
 
@@ -61,7 +72,15 @@ const HomeMain = () => {
 
 
             <div className={styles.homeMain__cardContainer__card_item}>
-            game status
+            <div className={styles.homeMain__funded}>
+                <span>
+                funded
+                </span>
+                <span>
+                15 backers
+                </span>
+              </div>
+              <span >34 days to go</span>
             </div>
           </div> {/* //card*/}
 
@@ -90,7 +109,15 @@ const HomeMain = () => {
 
 
             <div className={styles.homeMain__cardContainer__card_item}>
-            game status
+             <div className={styles.homeMain__funded}>
+                <span>
+                funded
+                </span>
+                <span>
+                15 backers
+                </span>
+              </div>
+              <span >34 days to go</span>
             </div>
           </div> {/* //card*/}
 
@@ -120,7 +147,15 @@ const HomeMain = () => {
 
 
             <div className={styles.homeMain__cardContainer__card_item}>
-            game status
+            <div className={styles.homeMain__funded}>
+                <span>
+                funded
+                </span>
+                <span>
+                15 backers
+                </span>
+              </div>
+              <span >34 days to go</span>
             </div>
           </div> {/* //card*/}
 
@@ -154,7 +189,15 @@ const HomeMain = () => {
 
 
             <div className={styles.homeMain__cardContainer__card_item}>
-            game status
+            <div className={styles.homeMain__funded}>
+                <span>
+                funded
+                </span>
+                <span>
+                15 backers
+                </span>
+              </div>
+              <span >34 days to go</span>
             </div>
           </div> {/* //card*/}
 
@@ -183,7 +226,16 @@ const HomeMain = () => {
 
 
             <div className={styles.homeMain__cardContainer__card_item}>
-            game status
+            <div className={styles.homeMain__funded}>
+                <span>
+                funded
+                </span>
+                <span>
+                15 backers
+                </span>
+              </div>
+              <span >34 days to go</span>
+              
             </div>
           </div> {/* //card*/}
 

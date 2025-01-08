@@ -3,6 +3,8 @@
 
 .homeMain {
  
+
+
   
   &__cardContainer {
     display: grid;
@@ -20,7 +22,7 @@
     &__card {
       max-width: 430px;
       height: 328px;
-      @include flexCol(space-between);      
+      @include flexCol(space-between, stretch);      
       flex-wrap: wrap;
       flex-direction: column; 
       align-content: space-between;    
@@ -47,7 +49,8 @@
     }
 
     &_gameName {      
-      @include setFont(22px, 700, $font-family, $color-primary);   
+      @include setFont(22px, 700, $font-family, $color-primary);  
+      margin-bottom: 4px; 
     }
     &_videogame {      
       @include setFont(12px, 600, $font-family, $color-softGrey);   
@@ -70,6 +73,9 @@
       @include flexCol(space-between); 
       background-color: olive;
     }
+//status block
+
+   
     
     }
 
@@ -77,16 +83,30 @@
     &__card2 {
       max-width: 430px;
       height: 328px;
-      @include flexCol(space-between);      
+      @include flexCol(space-between, stretch);      
       flex-wrap: wrap;
       flex-direction: column; 
       align-content: space-between;    
       
       @include bgWebp("../../../assets/images/home/videogame2.jpg","../../../assets/images/home/videogame2.webp");
       border-radius: 32px;
-      padding: 24px 24px 24px 16px;   
+      padding: 24px 24px 16px;   
     }
 
 
 }
+
+
+
+
+
+
+&__funded {        
+  // @include flexCol(stretch, space-between);
+   display: flex;
+   align-items: stretch;
+   justify-content: space-between;
+   @include setFont(12px, 500, $font-family, $color-softGrey);  
+ }
+
 }
