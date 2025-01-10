@@ -2,10 +2,8 @@
 @import "../../../styles/vars";
 
 .navbar {
-  max-width: 625px;
-  @include flexCol();
-  background-color: #010c10;
-  //background-color: green;
+  max-width: 630px;
+  @include flexCol();  
   padding: 60px 25px;
 
   @include smScreenMedia {
@@ -20,8 +18,7 @@
 
     @include mdScreenMedia {
       display: none;      
-    }
-  
+    }  
   }
 
   &__menu {
@@ -31,8 +28,7 @@
 
     @include mdScreenMedia {     
       gap: 20px;
-    }
-  
+    }  
   }
 
   &__menuLink {
@@ -42,18 +38,6 @@
     &:hover,
     &_active {
       color: $color-white;
-    }
-  }
-
-  &__menuBtn {
-    width: 29px;
-    height: 29px;
-    @include setFont(25px, 500, $font-family, $color-white);
-    background-color: #13343b;
-    border-radius: 50%;
-
-    @include smScreenMedia {     
-      display: none;
     }
   }
 }

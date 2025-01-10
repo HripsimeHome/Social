@@ -1,129 +1,77 @@
 import styles from "./HomeMain.module.scss";
 import ProgressBarFunding from "../../layout/ProgressBarFunding/ProgressBarFunding"
 
+import {
+  videogame1Image,
+  videogame1WebpImage,
+
+  videogame2Image,
+  videogame2WebpImage,
+
+} from "../../../assets/images.js"
+
 const HomeMain = () => {
+
+  const gameCard = [
+    {
+      backgroundImage: `url(${videogame1Image, videogame1WebpImage})`,
+      gameName: "Loftia VR Game",
+      gameType: "video game",
+      gamePosition: "top"
+    },
+
+    {
+      backgroundImage: `url(${videogame2Image, videogame2WebpImage})`,
+      gameName: "Design System Automation",
+      gameType: "video game",
+      gamePosition: "top"
+    },
+
+    {
+      backgroundImage: `url(${videogame1Image, videogame1WebpImage})`,
+      gameName: "Loftia VR Game",
+      gameType: "video game",
+      gamePosition: "top"
+    },
+
+    {
+      backgroundImage: `url(${videogame2Image, videogame2WebpImage})`,
+      gameName: "Design System Automation",
+      gameType: "video game",
+      gamePosition: "top"
+    },
+
+    {
+      backgroundImage: `url(${videogame1Image, videogame1WebpImage})`,
+      gameName: "Loftia VR Game",
+      gameType: "video game",
+      gamePosition: "top"
+    },
+
+    {
+      backgroundImage: `url(${videogame2Image, videogame2WebpImage})`,
+      gameName: "Design System Automation",
+      gameType: "video game",
+      gamePosition: "top"
+    },
+  ];
+
   return (
     <>
-      <section className={styles.homeMain}>
-        <div className={styles.homeMain__card}> 
+       <section className={styles.homeMain}>
+       {gameCard.map(({ gameName, gameType, gamePosition, backgroundImage }, index) => (
+        <div className={styles.homeMain__card} key={`${gameName}-${index}`} style={{ backgroundImage }}>
           <div className={styles.homeMain__cardHeader}>
             <div className={styles.homeMain__cardGameNameBlock}>
-              <h2 className={styles.homeMain__cardGameName}>
-                Loftia VR Game
-              </h2>
-              <span className={styles.homeMain__cardVideogame}>
-                video game
-              </span>
-            </div>  
-            <div className={styles.homeMain__cardGamePosition}>top</div>
-          </div>      
-                
+              <h2 className={styles.homeMain__cardGameName}>{gameName}</h2>
+              <span className={styles.homeMain__cardVideogame}>{gameType}</span>
+            </div>
+            <div className={styles.homeMain__cardGamePosition}>{gamePosition}</div>
+          </div>
           <ProgressBarFunding />
-        </div> {/* /card*/}
-
-
-        <div className={styles.homeMain__card2}> 
-          <div className={styles.homeMain__cardHeader}>
-            <div className={styles.homeMain__cardGameNameBlock}>
-              <h2 className={styles.homeMain__cardGameName}>
-                Loftia VR Game
-              </h2>
-              <span className={styles.homeMain__cardVideogame}>
-                video game
-              </span>
-            </div>  
-            <div className={styles.homeMain__cardGamePosition}>top</div>
-          </div>      
-                
-          <ProgressBarFunding />
-        </div> {/* /card*/}
-
-
-        <div className={styles.homeMain__card}> 
-          <div className={styles.homeMain__cardHeader}>
-            <div className={styles.homeMain__cardGameNameBlock}>
-              <h2 className={styles.homeMain__cardGameName}>
-                Loftia VR Game
-              </h2>
-              <span className={styles.homeMain__cardVideogame}>
-                video game
-              </span>
-            </div>  
-            <div className={styles.homeMain__cardGamePosition}>top</div>
-          </div>      
-                
-          <ProgressBarFunding />
-        </div> {/* /card*/}
-
-
-            
-
-
-           
-
-
-{/* Second row */}
- 
-
-<div className={styles.homeMain__card}> 
-          <div className={styles.homeMain__cardHeader}>
-            <div className={styles.homeMain__cardGameNameBlock}>
-              <h2 className={styles.homeMain__cardGameName}>
-                Loftia VR Game
-              </h2>
-              <span className={styles.homeMain__cardVideogame}>
-                video game
-              </span>
-            </div>  
-            <div className={styles.homeMain__cardGamePosition}>top</div>
-          </div>      
-                
-          <ProgressBarFunding />
-        </div> {/* /card*/}
-
-
-
-        <div className={styles.homeMain__card2}> 
-          <div className={styles.homeMain__cardHeader}>
-            <div className={styles.homeMain__cardGameNameBlock}>
-              <h2 className={styles.homeMain__cardGameName}>
-                Loftia VR Game
-              </h2>
-              <span className={styles.homeMain__cardVideogame}>
-                video game
-              </span>
-            </div>  
-            <div className={styles.homeMain__cardGamePosition}>top</div>
-          </div>      
-                
-          <ProgressBarFunding />
-        </div> {/* /card*/}
-
-
-
-
-        <div className={styles.homeMain__card}> 
-          <div className={styles.homeMain__cardHeader}>
-            <div className={styles.homeMain__cardGameNameBlock}>
-              <h2 className={styles.homeMain__cardGameName}>
-                Loftia VR Game
-              </h2>
-              <span className={styles.homeMain__cardVideogame}>
-                video game
-              </span>
-            </div>  
-            <div className={styles.homeMain__cardGamePosition}>top</div>
-          </div>      
-                
-          <ProgressBarFunding />
-        </div> {/* /card*/}
-
-
-
-
-
-
-      </section>
+        </div>
+      ))}
+    </section>
     </>
   );
 };

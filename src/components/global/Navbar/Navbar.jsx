@@ -22,9 +22,7 @@ const Navbar = () => {
               {text}
             </NavLink>
           ))}
-        </nav>
-
-        <button className={styles.navbar__menuBtn}>+</button>
+        </nav>        
       </div>
     </>
   );
