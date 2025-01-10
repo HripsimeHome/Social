@@ -36,7 +36,7 @@
   }
 
   &__menuLink {
-    @include setFont(16px, 500, $font-family, $color-lightGrey);
+    @include setFont(16px, 500, $font-family, $color-grey50);
     text-decoration: none;
 
     &:hover,

@@ -1,0 +1,37 @@
+@import "../../../styles/mixins";
+@import "../../../styles/vars";
+
+.progressBarFunding {
+
+    @include setFont(12px, 500, $font-family, $color-grey80);   
+
+  &__funded {        
+     @include flexCol(space-between, stretch);   
+     margin-bottom: 10px;         
+   }
+
+   &__percent{
+    @include setFont(14px, 700, $font-family, $color-lightGreen);  
+    background-color: rgba(61, 232, 255, 0.2);
+    border-radius: 8px;
+    margin-right: 4px;
+    padding: 4px 6px;
+   }
+
+   &__line {
+    display: flex;
+    width: 100%;
+    height: 4px;
+    background-color: $color-grey20;
+    border-radius: 100px;;
+    margin-bottom: 10px;;
+   }
+
+   &__slider {
+    width: 45%;
+    background-color: $color-lightGreen;
+    border-radius: 100px;
+   }
+
+
+}
