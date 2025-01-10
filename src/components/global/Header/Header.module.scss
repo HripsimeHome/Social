@@ -3,28 +3,24 @@
 
 .header { 
   @include flexCol(space-between);
+  //padding-top: 68px;
 
   @include mdScreenMedia {
     display: block;
   }
 
-  &__logoPosition {
-    position: relative;
-  }
-
-  &__menuBtn {
-    position: absolute;
-    top: 8px;
-    right: 16px;
+  &__menuBtn {   
     width: 29px;
     height: 29px;
-    @include setFont(25px, 500, $font-family, $color-white);
+    @include flexCol();
+    @include setFont(24px, 500, $font-family, $color-white);
+    cursor: pointer;
     background-color: #13343b;
     border-radius: 50%;  
 
-    @media (min-width: 577px) {
-      display: none;
-    }     
+    &:active {
+      transform: translateY(1px); 
+    }    
   }
 
   &__logo {
