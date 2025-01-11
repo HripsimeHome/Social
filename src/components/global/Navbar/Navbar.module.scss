@@ -4,11 +4,16 @@
 .navbar {
   max-width: 630px;
   @include flexCol();  
-  padding: 60px 25px;
+  margin-left: 255px; 
+  
 
   @include smScreenMedia {
     flex-wrap: wrap;
     padding: 30px 0;
+  }
+
+  @include lgScreenMedia {
+    margin-left: 0;
   }
 
   &__avatarImg {

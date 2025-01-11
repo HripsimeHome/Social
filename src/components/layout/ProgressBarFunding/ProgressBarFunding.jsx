@@ -7,7 +7,7 @@ const ProgressBarFunding = () => {
         <div className={styles.progressBarFunding__funded}>
           <div> 
             <span className={styles.progressBarFunding__percent}>40%            
-            </span> funded
+            </span>funded
            </div> 
 
           <span>15 backers</span>  
