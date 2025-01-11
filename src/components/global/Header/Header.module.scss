@@ -1,26 +1,42 @@
 @import "../../../styles/mixins";
 @import "../../../styles/vars";
 
-.header { 
-  @include flexCol(space-between);
-  //padding-top: 68px;
+.header {
+  position: fixed;
+  top: 0;     
+  background: transparent;
+  //transition: background-color 0.3s ease; 
+  padding: 80px 25px 60px;
 
   @include mdScreenMedia {
     display: block;
   }
 
-  &__menuBtn {   
+  // To Check
+  @include lgScreenMedia {
+    padding: 10px 20px;
+  }
+  
+  &.scrolled {
+    background-color: #0C1C22; 
+  }
+
+  &__fixed {
+    @include flexCol(space-between);
+  }
+
+  &__menuBtn {
     width: 29px;
     height: 29px;
     @include flexCol();
     @include setFont(24px, 500, $font-family, $color-white);
     cursor: pointer;
     background-color: #13343b;
-    border-radius: 50%;  
+    border-radius: 50%;
 
     &:active {
-      transform: translateY(1px); 
-    }    
+      transform: translateY(1px);
+    }
   }
 
   &__logo {

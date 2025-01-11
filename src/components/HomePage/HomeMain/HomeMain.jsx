@@ -1,5 +1,6 @@
 import styles from "./HomeMain.module.scss";
 import ProgressBarFunding from "../../layout/ProgressBarFunding/ProgressBarFunding"
+//import { allPagePath } from "../../../router/path"
 
 import {
   videogame1Image, 
@@ -55,8 +56,8 @@ const HomeMain = () => {
 
   return (
     <>
-       <section className={styles.homeMain}>
-       {gameCard.map(({ gameName, gameType, gamePosition, backgroundImage }, index) => (
+      <section className={styles.homeMain}>
+      {gameCard.map(({ gameName, gameType, gamePosition, backgroundImage }, index) => (
         <div className={styles.homeMain__card} key={index} style={{ backgroundImage }}>
           <div className={styles.homeMain__cardHeader}>
             <div className={styles.homeMain__cardGameNameBlock}>
