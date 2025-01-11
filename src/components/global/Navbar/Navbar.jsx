@@ -10,6 +10,8 @@ const Navbar = () => {
   return (
     <>
       <div className={styles.navbar}>
+
+      <div className={styles.navbar__container}>
         <img
           src={avatarImage}
           alt="Avatar"
@@ -23,6 +25,7 @@ const Navbar = () => {
             </NavLink>
           ))}
         </nav>        
+      </div>
       </div>
     </>
   );

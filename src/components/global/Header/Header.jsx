@@ -13,9 +13,9 @@ const Header = () => {
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 0) {
-        setIsScrolled(true); // Change background to olive when scrolled
+        setIsScrolled(true); // Change background to black when scrolled
       } else {
-        setIsScrolled(false); // Keep header green when at the top
+        setIsScrolled(false); // Keep header transparent when at the top
       }
     };
     
@@ -31,10 +31,12 @@ const Header = () => {
     <>
       <header className={`${styles.header} ${isScrolled ? styles.scrolled : ""}`}>
         <div className={styles.header__fixed}>
-          <Link to={homePagePath}>
-            <span className={styles.header__logo}>CROWNDING</span>
+          <Link to={homePagePath} className={styles.header__logo}>
+            <span>CROWNDING</span>
           </Link>
+        {/*  <Navbar className={styles.header__navbar} />*/}
           <Navbar />
+          
           <button
             className={styles.header__menuBtn}
             onClick={() => navigate(allPagePath)}
