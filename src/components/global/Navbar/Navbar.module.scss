@@ -5,11 +5,18 @@
   max-width: 630px;
   @include flexCol();  
   margin-left: 255px; 
+  order: 2;
   
+
+  // To check
+  &__container {
+    @include flexCol();      
+  }
+
 
   @include smScreenMedia {
     flex-wrap: wrap;
-    padding: 30px 0;
+    padding: 30px 0;    
   }
 
   @include lgScreenMedia {
@@ -30,6 +37,10 @@
     @include flexCol();
     gap: 32px;
     margin: 0 66px;
+
+    @include smScreenMedia {
+      margin: 0;  
+    }
 
     @include mdScreenMedia {     
       gap: 20px;

@@ -2,15 +2,13 @@
 @import "../../../styles/vars";
 
 .header {
-  position: fixed;
-  top: 0;     
+  position: sticky;
+  top: 0;    
+  width: 100%;
+  max-width: 1100px;  
   background: transparent;
-  //transition: background-color 0.3s ease; 
-  padding: 80px 25px 60px;
-
-  @include mdScreenMedia {
-    display: block;
-  }
+  transition: background-color 0.3s ease; 
+  padding: 78px 25px 60px;
 
   // To Check
   @include lgScreenMedia {
@@ -23,7 +21,15 @@
 
   &__fixed {
     @include flexCol(space-between);
+    flex-wrap: wrap;
+
+    @include smScreenMedia {
+      //display: block;
+      @include flexCol(flex-start);
+    }
   }
+
+  
 
   &__menuBtn {
     width: 29px;
@@ -33,6 +39,12 @@
     cursor: pointer;
     background-color: #13343b;
     border-radius: 50%;
+    order: 2;
+ 
+    @include mdScreenMedia {
+      order: 1;
+      margin-left: auto;;
+    } 
 
     &:active {
       transform: translateY(1px);
@@ -41,5 +53,20 @@
 
   &__logo {
     @include setFont(32px, 800, $font-family, $color-primary);
+    order: 0;   
+
+    @include mdScreenMedia {
+      order: 0;
+    } 
   }
+
+  &__navbar {
+    order: 1;
+    @include mdScreenMedia {
+      order: 2;
+    } 
+    
+  }
+
+
 }
