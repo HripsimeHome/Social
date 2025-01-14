@@ -3,7 +3,8 @@
 
 .homeMain {     
     display: grid;   
-    grid-template-columns: repeat(auto-fill,minmax(320px, 326px));
+    //grid-template-columns: repeat(auto-fill,minmax(320px, 20%));
+     grid-template-columns: repeat(auto-fill,minmax(320px, 326px));
     justify-content: center;
     gap: 60px;   
    

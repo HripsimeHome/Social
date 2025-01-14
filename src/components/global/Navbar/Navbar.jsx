@@ -5,8 +5,7 @@ import { avatarImage } from "../../../assets/images";
 
 const Navbar = () => {
   return (
-    <div className={styles.navbar}>
-      <div className={styles.navbar__container}>
+    <div className={styles.navbar}>     
         <img
           src={avatarImage}
           alt="Avatar"
@@ -27,8 +26,7 @@ const Navbar = () => {
               {text}
             </NavLink>
           ))}
-        </nav>
-      </div>
+        </nav>      
     </div>
   );
 };

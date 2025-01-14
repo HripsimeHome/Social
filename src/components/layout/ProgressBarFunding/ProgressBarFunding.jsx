@@ -1,26 +1,30 @@
-import styles from "./ProgressBarFunding.module.scss"
+import styles from "./ProgressBarFunding.module.scss";
 
-const ProgressBarFunding = () => {
+const ProgressBarFunding = ({ percent, bakers, daysToGo }) => {
   return (
     <>
-      <div className={styles.progressBarFunding}>                   
+      <div className={styles.progressBarFunding}>
         <div className={styles.progressBarFunding__funded}>
-          <div> 
-            <span className={styles.progressBarFunding__percent}>40%            
-            </span>funded
-           </div> 
+          <div>
+            <span className={styles.progressBarFunding__percent}>{percent}%</span>
+            funded
+          </div>
 
-          <span>15 backers</span>  
-        </div>            
-           
-        <div className={styles.progressBarFunding__trackingLine}>
-          <span className={styles.progressBarFunding__slider}></span>
+          <span>{bakers} backers</span>
         </div>
-        <span>34 days to go</span>   
-        
+
+        <div className={styles.progressBarFunding__trackingLine}>
+          <span
+            className={styles.progressBarFunding__slider}
+            style={{
+              width: `${percent}%`,
+            }}
+          ></span>
+        </div>
+        <span>{daysToGo} days to go</span>
       </div>
     </>
   );
-}
+};
 
-export default ProgressBarFunding
+export default ProgressBarFunding;
