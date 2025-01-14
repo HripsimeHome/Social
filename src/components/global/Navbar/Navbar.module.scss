@@ -2,25 +2,14 @@
 @import "../../../styles/vars";
 
 .navbar {
-  max-width: 630px;
-  @include flexCol();  
-  margin-left: 255px; 
-  order: 2;
-  
+  @include flexCol();   
+  order: 1;
 
-  // To check
-  &__container {
-    @include flexCol();      
-  }
-
-
-  @include smScreenMedia {
-    flex-wrap: wrap;
-    padding: 30px 0;    
-  }
-
-  @include lgScreenMedia {
-    margin-left: 0;
+  @include mdScreenMedia {       
+    width: 100%;     
+    order: 2;
+    padding-top: 24px;
+   // padding-bottom: 12px;
   }
 
   &__avatarImg {
@@ -29,8 +18,8 @@
     border-radius: 50%;
 
     @include mdScreenMedia {
-      display: none;      
-    }  
+      display: none;
+    }
   }
 
   &__menu {
@@ -38,12 +27,17 @@
     gap: 32px;
     margin: 0 66px;
 
-    @include smScreenMedia {
-      margin: 0;  
+    @include lgScreenMedia {
+      gap: 15px;
+      margin: 0 40px;
     }
 
-    @include mdScreenMedia {     
+    @include mdScreenMedia {
       gap: 20px;
+    }
+
+    @include smScreenMedia {
+      margin: 0;
     }  
   }
 

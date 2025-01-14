@@ -12,11 +12,14 @@
 body {
   color: $color-white;
   background-color: #010c10;
-  font-family: $font-family;  
+  font-family: $font-family;
   background-repeat: no-repeat;
-  height: 100vh;
+  padding-bottom: 50px;
   width: 100%;
-  @include bgWebp("../assets/images/home/background.png","../assets/images/home/background.webp");
+  @include bgWebp(
+    "../assets/images/home/background.png",
+    "../assets/images/home/background.webp"
+  );
   background-repeat: no-repeat;
 }
 
@@ -41,14 +44,14 @@ a {
 
 .container {
   max-width: 1100px;
-  width: 100%;  
+  width: 100%;
   //margin: 190px auto 50px;
-  margin: 0 auto 50px;
+  margin: 0 auto;
   //padding-top: 210px;
 
   //padding-right: 100px;
   //padding-left: 100px;
- // border: 1px solid green;
+  // border: 1px solid green;
   /*
   @include xlScreenMedia {
     max-width: 960px;
@@ -64,7 +67,7 @@ a {
 
   @include smScreenMedia {
     max-width: 360px;
-    padding-left: 16px;
-    padding-right: 16px;
+    //padding-left: 16px;
+   // padding-right: 16px;
   }
 }

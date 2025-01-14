@@ -3,33 +3,34 @@
 
 .header {
   position: sticky;
-  top: 0;    
+  top: 0;
+  left: 0;
   width: 100%;
-  max-width: 1100px;  
-  background: transparent;
-  transition: background-color 0.3s ease; 
-  padding: 78px 25px 60px;
+  transition: $transition;
+  padding-top: 78px;
+  padding-bottom: 60px;  
 
-  // To Check
-  @include lgScreenMedia {
-    padding: 10px 20px;
+  @include xlScreenMedia {      
+    padding: 3% 20px; 
   }
-  
+
   &.scrolled {
-    background-color: #0C1C22; 
+    background-color: #0c1c22;   
+    padding-top: 20px;
+    padding-bottom: 20px;
   }
+  &__container {
+    @include flexCol(space-between);    
 
-  &__fixed {
-    @include flexCol(space-between);
-    flex-wrap: wrap;
-
-    @include smScreenMedia {
-      //display: block;
-      @include flexCol(flex-start);
+    @include lgScreenMedia {
+      //justify-content: flex-start;
+      justify-content: center;
+    }
+    @include lgScreenMedia {
+     // padding: 10px 20px;
+      flex-wrap: wrap;
     }
   }
-
-  
 
   &__menuBtn {
     width: 29px;
@@ -40,33 +41,26 @@
     background-color: #13343b;
     border-radius: 50%;
     order: 2;
- 
+
+    @include lgScreenMedia {         
+      margin-left: auto;
+    }
+
     @include mdScreenMedia {
-      order: 1;
-      margin-left: auto;;
-    } 
+      order: 1;     
+    }     
 
     &:active {
       transform: translateY(1px);
     }
   }
 
+  &__logoWrapper {
+    flex: 1;
+  }
+
   &__logo {
     @include setFont(32px, 800, $font-family, $color-primary);
     order: 0;   
-
-    @include mdScreenMedia {
-      order: 0;
-    } 
   }
-
-  &__navbar {
-    order: 1;
-    @include mdScreenMedia {
-      order: 2;
-    } 
-    
-  }
-
-
 }
