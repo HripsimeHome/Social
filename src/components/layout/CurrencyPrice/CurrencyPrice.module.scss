@@ -1,0 +1,17 @@
+@import "../../../styles/mixins";
+@import "../../../styles/vars";
+
+.currencyPrice {
+   display: flex;
+   flex-direction: column;
+   margin-top: 24px;
+
+   &__currency {
+    @include setFont(16px, 700, $font-family, $color-lightGreen);
+    margin-bottom: 4px;
+   }
+
+   &__target {
+    @include setFont(12px, 500, $font-family, $color-grey80);
+   }   
+}

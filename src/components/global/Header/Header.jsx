@@ -2,7 +2,10 @@ import React, { useState, useEffect } from "react";
 import styles from "./Header.module.scss";
 import Navbar from "../Navbar/Navbar";
 
-import { homePagePath, allPagePath } from "../../../router/path";
+import { homePagePath, 
+  singlePagePath,
+ // allPagePath 
+} from "../../../router/path";
 import { Link } from "react-router-dom";
 
 const Header = () => {
@@ -41,7 +44,7 @@ const Header = () => {
             
             <Navbar />
 
-            <Link to={allPagePath} className={styles.header__menuBtn}>
+            <Link to={singlePagePath} className={styles.header__menuBtn}>
               +
             </Link>
           </div>
