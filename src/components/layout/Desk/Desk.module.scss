@@ -1,0 +1,31 @@
+@import "../../../styles/mixins";
+@import "../../../styles/vars";
+
+.desk {
+  &__deskContainer {
+    max-width: 280px;
+    @include setFont(12px, 500, $font-family, $color-grey80);
+    //background-color: rgba(255, 255, 255, 0.5);
+    background-color: rgba(166, 166, 166, 0.1);
+    border-radius: 24px;
+    padding: 24px;
+  }
+
+  &__deskTitle {   
+    @include setFont(16px, 700, $font-family, $color-primary);
+    margin-bottom: 16px;    
+  }
+
+  &__deskText {   
+   margin-bottom: 10px;;   
+  }
+
+  &__readMore {   
+    color: $color-lightGreen;
+     
+    &:hover {
+      color: $color-darkGreen;
+      cursor: pointer;
+    }    
+  }
+}
