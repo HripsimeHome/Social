@@ -13,13 +13,13 @@ const ProjectStatusLabel = () => {
 
     return () => clearInterval(intervalId); 
   }, []);
- 
+  
 
   return (
     <>
       <div className="labelPin"> 
-        <span>{labels[currentLabelIndex]}</span>
-        
+       <span>{labels[currentLabelIndex]}</span>
+        {/* <span>new</span>*/}
       </div>     
     </>
   );

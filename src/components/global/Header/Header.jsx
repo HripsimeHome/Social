@@ -1,12 +1,13 @@
 import React, { useState, useEffect } from "react";
 import styles from "./Header.module.scss";
 import Navbar from "../Navbar/Navbar";
+import { Link } from "react-router-dom";
 
 import { homePagePath, 
   singlePagePath,
  // allPagePath 
 } from "../../../router/path";
-import { Link } from "react-router-dom";
+
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);

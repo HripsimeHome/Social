@@ -88,13 +88,30 @@ a {
     margin-bottom: 16px;    
   }
 
-  .labelPin {  
-   // @include flexCol(); 
+  .labelPin {     
     background-color: $color-bgLightGreen;
     text-align: center;
     text-transform: uppercase;   
     border-radius: 8px;
     padding: 4px 8px;  
     @include setFont(14px, 700, $font-family, $color-lightGreen);
+  }
+
+
+  
+
+  .singlePgeContainer {     
+    display: flex; 
+  }
+
+  .singleDeskContainer  {
+    display: flex;
+    flex-direction: column;    
+    flex: 1;
+  }
+
+  .singlePageMainContainer {
+    display: flex;   
+    flex: 1;
   }
 }
