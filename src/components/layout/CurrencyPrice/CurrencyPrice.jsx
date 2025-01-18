@@ -1,12 +1,22 @@
 import styles from "./CurrencyPrice.module.scss";
 
 const CurrencyPrice = () => {
+
+  const currPrice = {
+    currency: "22,500",
+    target: "150,000"
+  };
+
   return (
     <>
       <div className={styles.currencyPrice}>      
-        <span className={styles.currencyPrice__currency}>22,500 USDT</span>
-        <label className={styles.currencyPrice__target}>Target of 150,000 USDT</label>
-        </div>     
+        <span className={styles.currencyPrice__currency}>
+          {`${currPrice.currency}`} USDT          
+        </span>
+        <label className={styles.currencyPrice__target}>
+          Target of {`${currPrice.target}`} USDT
+        </label>
+      </div>     
     </>
   );
 };
