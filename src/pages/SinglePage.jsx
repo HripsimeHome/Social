@@ -1,12 +1,18 @@
 import SinglePageDashboard from "../components/SinglePage//SinglePageDashboard/SinglePageDashboard";
 import SinglePageMain from "../components/SinglePage//SinglePageMain/SinglePageMain";
 
-
 const SinglePage = () => {
   return (
     <>
-      <SinglePageDashboard />
-      <SinglePageMain />
+      <div className="singlePgeContainer">
+        <div className="singleDeskContainer">
+          <SinglePageDashboard />
+        </div>
+
+        <div className="singlePageMainContainer">
+          <SinglePageMain />
+        </div>
+      </div>       
     </>
   );
 };

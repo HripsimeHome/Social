@@ -11,6 +11,13 @@ import {
 } from "../../../assets/images";
 
 const SinglePageMain = () => {
+
+  const progress = {
+    bakers: 100,
+    percent: 15,
+    daysToGo: 34
+  };
+ 
   return (
     <>
       <section className={`${styles.singlePageMain} desk`}>  
@@ -48,7 +55,9 @@ const SinglePageMain = () => {
         </div>{/* deskHeader*/}
         
         <div className={styles.singlePageMain__deskPanel}>
-        <ProgressBarFunding />        
+        <ProgressBarFunding
+         {...progress}
+        />        
         <CurrencyPrice />
         </div>       
       </section>

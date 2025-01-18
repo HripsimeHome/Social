@@ -4,8 +4,10 @@
 .singlePageMain {
   display: flex;
   flex-direction: column;
-  max-width: 573px;
- // width: 100%; 
+ // max-width: 573px;
+ // width: 100%;
+  flex: 1;
+
 
   &__deskHeader {
     @include flexCol(space-between);

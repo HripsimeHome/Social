@@ -1,10 +1,23 @@
 import styles from "./HomeMain.module.scss";
+import { useState, useEffect } from "react";
 import ProgressBarFunding from "../../layout/ProgressBarFunding/ProgressBarFunding";
-//import { allPagePath } from "../../../router/path"
+import { Link } from "react-router-dom"
+import { singlePagePath } from "../../../router/path"
 
 import { videogame1Image, videogame2Image } from "../../../assets/images.js";
 
 const HomeMain = () => {
+
+  const [percentClass, setPercentClass] = useState(styles.percentBgColor);
+
+  useEffect(() => {
+    // Check if a value is stored in localStorage and update the class
+    const storedClass = localStorage.getItem('percentClass');
+    if (storedClass) {
+      setPercentClass(storedClass);
+    }
+  }, []);
+
   const gameCard = [
     {
       backgroundImage: `url(${videogame1Image})`,
@@ -97,7 +110,8 @@ const HomeMain = () => {
             },
             index
           ) => (
-            <div
+            
+            <Link to={singlePagePath}
               className={styles.homeMain__card}
               key={index}
               style={{ backgroundImage }}
@@ -126,9 +140,9 @@ const HomeMain = () => {
                 //  bakers={progress.bakers}
                 //  daysToGo={progress.daysToGo}
                  
-                percentClass={styles.percentBackground}
+                percentClass={styles.percentBgColor}
               />
-            </div>
+            </Link>
           )
         )}
       </section>

@@ -3,14 +3,23 @@ import ProgressBarFunding from "../../../layout/ProgressBarFunding/ProgressBarFu
 import CurrencyPrice from "../../../layout/CurrencyPrice/CurrencyPrice"
 
 const SinglePageDeskFunding = () => {
+  const progress = {
+    bakers: 100,   
+    percent: 75,  
+    daysToGo: 10, 
+  };
+
+
   return (
     <>
-      <section className={`${styles.singlePageDeskFunding} desk`}>
-        
+      <section className={`${styles.singlePageDeskFunding} desk`}>        
         <h3 className="deskTitle">
         Funding
         </h3>
-        <ProgressBarFunding />
+         <ProgressBarFunding 
+          {...progress}
+          
+        />
         <CurrencyPrice />        
       </section>
     </>

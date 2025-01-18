@@ -17,8 +17,8 @@
 
   &.scrolled {
     background-color: #0c1c22;   
-    padding-top: 20px;
-    padding-bottom: 20px;
+    //padding-top: 20px;
+    //padding-bottom: 20px;
   }
   &__container {
     @include flexCol(space-between);    
