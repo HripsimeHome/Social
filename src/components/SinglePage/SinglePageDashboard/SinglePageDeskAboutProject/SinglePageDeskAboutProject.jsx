@@ -1,11 +1,15 @@
 import styles from "./SinglePageDeskAboutProject.module.scss"
- 
+import  LabelPin  from "../../../layout/LabelPin/LabelPin"
+
 const SinglePageDeskAboutProject = () => {
   return (
     <>
       <section className={styles.singlePageDeskAboutProject}>
       <div className={styles.singlePageDeskAboutProject__newPinContainer}>
-      <div className={styles.singlePageDeskAboutProject__newPin}>new</div>
+
+      {/*<div className={styles.singlePageDeskAboutProject__newPin}>new</div>*/}
+      <LabelPin />
+
         </div>
         <div className={`${styles.singlePageDeskAboutProject} desk`}>
           <h3 className="deskTitle">
