@@ -7,7 +7,7 @@ const SinglePageDeskFunding = () => {
     <>
       <section className={`${styles.singlePageDeskFunding} desk`}>
         
-        <h3 className={styles.desk__deskTitle}>
+        <h3 className="deskTitle">
         Funding
         </h3>
         <ProgressBarFunding />

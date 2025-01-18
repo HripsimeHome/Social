@@ -1,6 +1,7 @@
 import styles from "./HomeMain.module.scss";
 import ProgressBarFunding from "../../layout/ProgressBarFunding/ProgressBarFunding";
 //import { allPagePath } from "../../../router/path"
+// NEW TOP POPULAR
 
 import { videogame1Image, videogame2Image } from "../../../assets/images.js";
 
