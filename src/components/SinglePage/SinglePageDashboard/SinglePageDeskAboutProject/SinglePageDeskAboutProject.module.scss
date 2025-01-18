@@ -1,16 +1,20 @@
-@import "../../../styles/mixins";
-@import "../../../styles/vars";
+@import "../../../../styles/mixins";
+@import "../../../../styles/vars";
 
 .singlePageDeskAboutProject {
-  max-width: 280px;  @include flexCol();
-flex-direction: column;
-  &__newPin {
-    
+   max-width: 328px;   
+   margin-bottom: 16px; 
+
+   &__newPinContainer {
+    display: flex; 
+    @include flexCol();   
+   }
+
+  &__newPin {      
     text-align: center;
-    margin-bottom: 16px;
+    text-transform: uppercase;   
     background-color: $color-bgLightGreen;
-    @include setFont(14px, 700, $font-family, $color-lightGreen);
-    text-transform: uppercase;
+    @include setFont(14px, 700, $font-family, $color-lightGreen);   
     border-radius: 8px;
     margin-bottom: 16px;
     padding: 4px 8px;

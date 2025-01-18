@@ -1,11 +1,12 @@
-import styles from "./SinglePageDashboard.module.scss"
-import Desk from '../../layout/Desk/Desk';
+
+import SinglePageDeskAboutProject from "./SinglePageDeskAboutProject/SinglePageDeskAboutProject"
+import SinglePageDeskFunding from "./SinglePageDeskFunding/SinglePageDeskFunding"
  
 const SinglePageDashboard = () => {
   return (
     <>
-      <Desk />
-      
+      <SinglePageDeskAboutProject />  
+      <SinglePageDeskFunding />    
     </>
   );
 };

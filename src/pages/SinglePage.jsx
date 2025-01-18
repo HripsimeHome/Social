@@ -1,12 +1,12 @@
 import SinglePageDashboard from "../components/SinglePage//SinglePageDashboard/SinglePageDashboard";
-import SinglePageFunding from "../components/SinglePage//SinglePageFunding/SinglePageFunding";
+import SinglePageMain from "../components/SinglePage//SinglePageMain/SinglePageMain";
 
 
 const SinglePage = () => {
   return (
     <>
       <SinglePageDashboard />
-      <SinglePageFunding />
+      <SinglePageMain />
     </>
   );
 };
