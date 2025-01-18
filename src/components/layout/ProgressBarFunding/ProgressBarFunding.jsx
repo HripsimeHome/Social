@@ -1,13 +1,17 @@
 import styles from "./ProgressBarFunding.module.scss";
 
-const ProgressBarFunding = ({ percent, bakers, daysToGo }) => {
+const ProgressBarFunding = ({ percent, bakers, daysToGo, percentClass }) => {
   return (
     <>
       <div className={styles.progressBarFunding}>
         <div className={styles.progressBarFunding__funded}>
           <div>
-            <span className={styles.progressBarFunding__percent}>{percent}%</span>
-            funded
+          <span
+            className={`${styles.progressBarFunding__percent} ${percentClass} labelPin`}
+          >
+            {percent}%
+          </span> 
+             funded
           </div>
 
           <span>{bakers} backers</span>

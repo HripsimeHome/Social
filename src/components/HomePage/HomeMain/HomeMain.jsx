@@ -1,7 +1,6 @@
 import styles from "./HomeMain.module.scss";
 import ProgressBarFunding from "../../layout/ProgressBarFunding/ProgressBarFunding";
 //import { allPagePath } from "../../../router/path"
-// NEW TOP POPULAR
 
 import { videogame1Image, videogame2Image } from "../../../assets/images.js";
 
@@ -12,7 +11,7 @@ const HomeMain = () => {
       gameName: "Loftia VR Game",
       gameType: "video game",
       gamePosition: "top",
-      isInTop: true,
+     // isInTop: true,
       progress: {
         bakers: 15,
         percent: 45,
@@ -24,8 +23,8 @@ const HomeMain = () => {
       backgroundImage: `url(${videogame2Image})`,
       gameName: "Design System Automation",
       gameType: "video game",
-      gamePosition: "top",
-      isInTop: true,
+      gamePosition: "new",
+      //isInTop: true,
       progress: {
         bakers: 20,
         percent: 15,
@@ -37,8 +36,8 @@ const HomeMain = () => {
       backgroundImage: `url(${videogame1Image})`,
       gameName: "Loftia VR Game",
       gameType: "video game",
-      gamePosition: "top",
-      isInTop: true,
+      gamePosition: "popular",
+      //isInTop: true,
       progress: {
         bakers: 55,
         percent: 55,
@@ -50,7 +49,7 @@ const HomeMain = () => {
       backgroundImage: `url(${videogame2Image})`,
       gameName: "Design System Automation",
       gameType: "video game",
-      gamePosition: "top",
+      gamePosition: "new",
       progress: {
         bakers: 35,
         percent: 80,
@@ -62,7 +61,7 @@ const HomeMain = () => {
       backgroundImage: `url(${videogame1Image})`,
       gameName: "Loftia VR Game",
       gameType: "video game",
-      gamePosition: "top",
+      gamePosition: "popular",
       progress: {
         bakers: 64,
         percent: 85,
@@ -94,7 +93,7 @@ const HomeMain = () => {
               gamePosition,
               backgroundImage,
               progress,
-              isInTop,
+              //isInTop,
             },
             index
           ) => (
@@ -110,17 +109,24 @@ const HomeMain = () => {
                     {gameType}
                   </span>
                 </div>
-                {isInTop && (
-                  <div className={styles.homeMain__cardGamePosition}>
-                    {gamePosition}
-                  </div>
-                )}{" "}
+                {/* {isInTop && (
+                    <div className={styles.homeMain__cardGamePosition}>
+                      {gamePosition}
+                    </div>
+                  )}{" "}
+                  */}
+
+                <span className="labelPin">                  
+                  {gamePosition}
+                </span>               
               </div>
               <ProgressBarFunding
                 {...progress}
                 //  percent={progress.percent}
                 //  bakers={progress.bakers}
                 //  daysToGo={progress.daysToGo}
+                 
+                percentClass={styles.percentBackground}
               />
             </div>
           )
