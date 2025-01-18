@@ -10,10 +10,7 @@
      margin-bottom: 10px;         
    }
 
-   &__percent{
-    @include setFont(14px, 700, $font-family, $color-lightGreen);  
-    background-color: rgba(61, 232, 255, 0.2);
-    border-radius: 8px;
+   &__percent{    
     margin-right: 5px;
     padding: 4px 6px;
    }

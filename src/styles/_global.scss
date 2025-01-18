@@ -30,6 +30,7 @@ button:active,
 a:focus-visible {
   outline: none;
   border: none;
+  background-color: transparent;
 }
 
 a {
@@ -77,7 +78,7 @@ a {
     background-color: rgba(255, 255, 255, 0.05);  
     backdrop-filter: blur(30px); 
     -webkit-backdrop-filter: blur(30px); 
-    @include setFont(12px, 500, $font-family, $color-grey80);  
+    @include setFont(12px, 500, $font-family, $color-grey50);  
     border-radius: 24px;
     padding: 24px;
   }
@@ -87,7 +88,13 @@ a {
     margin-bottom: 16px;    
   }
 
-  &__deskText {   
-    margin-bottom: 10px;   
-   }
+  .labelPin {  
+   // @include flexCol(); 
+    background-color: $color-bgLightGreen;
+    text-align: center;
+    text-transform: uppercase;   
+    border-radius: 8px;
+    padding: 4px 8px;  
+    @include setFont(14px, 700, $font-family, $color-lightGreen);
+  }
 }

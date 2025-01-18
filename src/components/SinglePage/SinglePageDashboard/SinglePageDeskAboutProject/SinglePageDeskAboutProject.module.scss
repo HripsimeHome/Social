@@ -6,33 +6,33 @@
    margin-top: 16px; 
    margin-bottom: 16px; 
 
-   &__newPinContainer {
-    display: flex; 
+   &__projectStatusLContainer {    
     @include flexCol();   
    }
-
-  &__newPin {      
-    text-align: center;
-    text-transform: uppercase;   
-    background-color: $color-bgLightGreen;
-    @include setFont(14px, 700, $font-family, $color-lightGreen);   
-    border-radius: 8px;
-    margin-bottom: 16px;
-    padding: 4px 8px;
-  } 
 
   &__deskText {   
    margin-bottom: 10px;   
   }
 
-  &__truncate {   
-    display: -webkit-box;
-    -webkit-line-clamp: 2;
+   &__expandedText {
+    display: -webkit-box;   
     -webkit-box-orient: vertical;
     overflow: hidden;
-    text-overflow: ellipsis;
-    max-width: 240px;  
-   }    
+   // transition: max-height 0.3s ease, -webkit-line-clamp 0.3s ease;
+    transition: $transition;  
+    // text-overflow: ellipsis;
+    
+
+    &.collapsed {
+      -webkit-line-clamp: 2; // Limit to 2 lines
+     // max-height: 3.2em; // Approximate height for 2 lines (adjust if needed)
+    }
+
+    &.expanded {
+      -webkit-line-clamp: unset; // Show all text
+    //  max-height: 100%; // Fully expanded
+    }
+  }
 
   &__readMore {   
     color: $color-lightGreen;
