@@ -3,4 +3,32 @@
 
 .singlePageDeskFunding {
   max-width: 328px;  
+  
+  
+
+  &__panelCreate {
+    @include flexCol(space-between);
+    
+    margin-top: 23px;
+    //padding: 12px 30px;
+  }
+
+  &__sum {
+   padding-left: 30px;
+  }
+
+  &__btnCreate {
+    width: 125px;
+    background-color: $color-lightGreen;
+    @include setFont(16px, 700, $font-family, $color-black);
+    border-radius: 50px;
+    cursor: pointer;
+    padding: 12px 30px;
+
+    &:active {
+      transform: translateY(1px);
+      background-color:#A3E52B;
+    }
+  }
+  
 }
