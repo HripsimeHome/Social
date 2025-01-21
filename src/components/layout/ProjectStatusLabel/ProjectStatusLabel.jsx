@@ -19,6 +19,9 @@ const ProjectStatusLabel = () => {
     <>
       <div className="labelPin"> 
        <span>{labels[currentLabelIndex]}</span>
+
+
+       
         {/* <span>new</span>*/}
       </div>     
     </>
