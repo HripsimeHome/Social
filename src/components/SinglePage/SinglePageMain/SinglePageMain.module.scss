@@ -25,8 +25,12 @@
     margin-left: -20px;   
   }  
 
-  &__deskPanel {
-    margin-top: 24px;
+  &__deskPanel {    
     max-width: 273px;
+    margin-top: 24px;
+  }
+
+  &__panelMargin {
+    margin-bottom: 24px;     
   }
 }
