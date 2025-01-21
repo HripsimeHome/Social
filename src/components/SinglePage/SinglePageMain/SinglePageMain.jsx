@@ -59,7 +59,15 @@ const SinglePageMain = () => {
          {...progress}
         />        
         <CurrencyPrice />
-        </div>       
+        </div>  
+
+         <div className="whitePanel"></div>
+         <div className="whitePanel"></div>
+         <div className="whitePanel"></div>    
+
+         <br />
+
+          
       </section>
     </>
   );

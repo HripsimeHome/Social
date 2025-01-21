@@ -12,16 +12,26 @@ const SinglePageDeskFunding = () => {
 
   return (
     <>
-      <section className={`${styles.singlePageDeskFunding} desk`}>        
-        <h3 className="deskTitle">
-        Funding
-        </h3>
-         <ProgressBarFunding 
-          {...progress}
-          
-        />
-        <CurrencyPrice />        
-      </section>
+      <div className={styles.singlePageDeskFunding}>      
+        <div className={`${styles.singlePageDeskFunding} desk`}>
+          <h3 className="deskTitle">
+          Funding
+          </h3>
+          <ProgressBarFunding 
+            {...progress}            
+          />
+          <CurrencyPrice /> 
+        </div>
+<br />
+        
+
+
+
+        <div className={`${styles.singlePageDeskFunding__panelCreate} lightGreenPanel`}>
+          <span className={styles.singlePageDeskFunding__sum}>0 USDT</span>
+          <button className={styles.singlePageDeskFunding__btnCreate}>CREATE</button>
+        </div>       
+      </div>      
     </>
   );
 };
