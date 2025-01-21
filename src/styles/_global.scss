@@ -134,6 +134,7 @@ a {
     }   
   }
 
+
 // Button panel: white; Light green 
 
 .btnPanel {
@@ -142,36 +143,28 @@ a {
   border-radius: 50px; 
 }
 
-.sumPadding {
-  padding-left: 30px;
+.whitePanel {
+  background-color: $color-white;   
 }
 
 .lightGreenPanel {
-  background-color: $color-lightGreen;   
-  //padding: 12px 30px;
+  background-color: $color-lightGreen;     
 }
 
-.whitePanel {
-  background-color: $color-white; 
-  max-width: 273px;
- // height: 45px;   
-  margin-bottom: 24px;
-  //padding: 12px 30px
+.sumPadding {
+  padding-left: 28px;
 }
 
 .btnlightGreen {
-//  max-width: 125px;
   background-color: $color-lightGreen;
   @include setFont(16px, 700, $font-family, $color-black);
   border-radius: 50px;
   cursor: pointer;
-  padding: 12px 30px;
+  padding: 12px 35px;
 
   &:active {
     transform: translateY(1px);    
     background-color: $color-lime;    
   }
 }  
-
-
 }

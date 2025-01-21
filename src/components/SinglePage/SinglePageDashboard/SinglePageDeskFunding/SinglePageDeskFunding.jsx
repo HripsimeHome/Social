@@ -9,7 +9,6 @@ const SinglePageDeskFunding = () => {
     daysToGo: 10, 
   };
 
-
   return (
     <>
       <div className={styles.singlePageDeskFunding}>      
@@ -21,15 +20,12 @@ const SinglePageDeskFunding = () => {
             {...progress}            
           />
           <CurrencyPrice /> 
-        </div>
-<br />      
+        </div>          
 
         <div className="btnPanel lightGreenPanel">
           <span className="sumPadding">0 USDT</span>
           <button className="btnlightGreen">CREATE</button>
         </div>
-
-
       </div>      
     </>
   );
