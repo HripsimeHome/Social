@@ -53,19 +53,42 @@ const SinglePageMain = () => {
               />   
           </div>
         </div>{/* deskHeader*/}
-        
-        <div className={styles.singlePageMain__deskPanel}>
+
         <ProgressBarFunding
          {...progress}
         />        
         <CurrencyPrice />
-        </div>  
+        
+        <div className={styles.singlePageMain__deskPanel}>
+        
+         
 
-         <div className="whitePanel"></div>
-         <div className="whitePanel"></div>
-         <div className="whitePanel"></div>    
 
-         <br />
+
+        <div className="btnPanel whitePanel">
+          <span className="sumPadding">1 USDT</span>
+          <button className="btnlightGreen">Thanks!</button>
+        </div>
+
+        
+        <div className="btnPanel whitePanel">
+          <span className="sumPadding">11 USDT</span>
+          <button className="btnlightGreen">0.015%</button>
+        </div>
+
+        <div className="btnPanel whitePanel">
+          <span className="sumPadding">111 USDT</span>
+          <span className="btnlightGreen">0.25%</span>
+        </div>
+
+        <div className="btnPanel lightGreenPanel">
+          <span className="sumPadding">1111 USDT</span>
+          <span className="btnlightGreen">2.55%</span>
+        </div>
+
+ 
+        </div> 
+
 
           
       </section>

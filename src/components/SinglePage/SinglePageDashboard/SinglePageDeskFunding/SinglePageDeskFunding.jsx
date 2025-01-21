@@ -22,15 +22,14 @@ const SinglePageDeskFunding = () => {
           />
           <CurrencyPrice /> 
         </div>
-<br />
-        
+<br />      
+
+        <div className="btnPanel lightGreenPanel">
+          <span className="sumPadding">0 USDT</span>
+          <button className="btnlightGreen">CREATE</button>
+        </div>
 
 
-
-        <div className={`${styles.singlePageDeskFunding__panelCreate} lightGreenPanel`}>
-          <span className={styles.singlePageDeskFunding__sum}>0 USDT</span>
-          <button className={styles.singlePageDeskFunding__btnCreate}>CREATE</button>
-        </div>       
       </div>      
     </>
   );

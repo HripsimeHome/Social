@@ -12,7 +12,6 @@
     //width: 100%;
   }
 
-
   &__deskHeader {
     @include flexCol(space-between);
     width: 100%;
@@ -27,6 +26,7 @@
   }  
 
   &__deskPanel {
-    margin-bottom: 24px;
+    margin-top: 24px;
+    max-width: 273px;
   }
 }

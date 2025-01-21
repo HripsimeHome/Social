@@ -37,6 +37,10 @@ a {
   text-decoration: none;
 }
 
+.pointer {
+  cursor: pointer;
+}
+
 #root {
   min-height: 100vh;
   display: flex;
@@ -98,7 +102,7 @@ a {
   }
 
 
-  
+  //
 
   .singlePgeContainer {     
     display: flex; 
@@ -130,23 +134,44 @@ a {
     }   
   }
 
-// Panels: white; Light green 
+// Button panel: white; Light green 
+
+.btnPanel {
+  @include flexCol(space-between);  
+  @include setFont(16px, 700, $font-family, $color-black);
+  border-radius: 50px; 
+}
+
+.sumPadding {
+  padding-left: 30px;
+}
 
 .lightGreenPanel {
-  background-color: $color-lightGreen;
-  @include setFont(16px, 700, $font-family, $color-black);
-  border-radius: 50px;
+  background-color: $color-lightGreen;   
   //padding: 12px 30px;
 }
 
 .whitePanel {
+  background-color: $color-white; 
   max-width: 273px;
-  height: 45px;
-  background-color: $color-white;
-  @include setFont(16px, 700, $font-family, $color-black);
-  border-radius: 50px;  
-  margin-bottom: 24px;;
+ // height: 45px;   
+  margin-bottom: 24px;
+  //padding: 12px 30px
 }
+
+.btnlightGreen {
+//  max-width: 125px;
+  background-color: $color-lightGreen;
+  @include setFont(16px, 700, $font-family, $color-black);
+  border-radius: 50px;
+  cursor: pointer;
+  padding: 12px 30px;
+
+  &:active {
+    transform: translateY(1px);    
+    background-color: $color-lime;    
+  }
+}  
 
 
 }
