@@ -96,4 +96,11 @@
     @include setFont(12px, 800, $font-family, $color-grey80);
     text-transform: uppercase;
   }
+
+  &__toggleCategory {
+    width: 100px;
+    height: 100px;
+    background-color: green;
+  }
+  
 }

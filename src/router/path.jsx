@@ -17,31 +17,25 @@ export const educationPagePath = "/education";
 export const technologyPagePath = "/technology";
 export const aiPagePath = "/ai";
 
-interface IRoute {
-  path: string;
-  component: ReactElement<any, any>;
-  children?: Omit<IRoute, "children">[];
-}
-
 export const routes = [
   {
     path: homePagePath,
     component: <HomePage />,
-  }, 
+  },
 
-  {   
+  {
     path: allPagePath,
     component: <AllPage />,
   },
 
-  {   
+  {
     path: singlePagePath,
     component: <SinglePage />,
   },
 
   {
     path: musicPagePath,
-    component: <MusicPage />,    
+    component: <MusicPage />,
   },
 
   {

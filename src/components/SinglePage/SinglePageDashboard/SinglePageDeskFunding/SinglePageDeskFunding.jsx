@@ -19,7 +19,10 @@ const SinglePageDeskFunding = () => {
           <ProgressBarFunding 
             {...progress}            
           />
-          <CurrencyPrice /> 
+          <CurrencyPrice 
+            currency="0"
+            target="1"
+          /> 
         </div>          
 
         <div className="btnPanel lightGreenPanel">

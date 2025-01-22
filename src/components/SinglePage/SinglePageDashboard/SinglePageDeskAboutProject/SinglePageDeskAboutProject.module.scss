@@ -2,44 +2,43 @@
 @import "../../../../styles/vars";
 
 .singlePageDeskAboutProject {
-   max-width: 328px;  
-   margin-top: 16px; 
-   margin-bottom: 16px; 
+  max-width: 328px;
+  margin-top: 16px;
+  margin-bottom: 16px;
 
-   &__projectStatusLContainer {    
-    @include flexCol();   
-   }
-
-  &__deskText {   
-   margin-bottom: 10px;   
+  &__projectStatusLContainer {
+    @include flexCol();
   }
 
-   &__expandedText {
-    display: -webkit-box;   
+  &__deskText {
+    margin-bottom: 10px;
+  }
+
+  &__expandedText {
+    display: -webkit-box;
     -webkit-box-orient: vertical;
     overflow: hidden;
-   // transition: max-height 0.3s ease, -webkit-line-clamp 0.3s ease;
-    transition: $transition;  
+    // transition: max-height 0.3s ease, -webkit-line-clamp 0.3s ease;
+    transition: $transition;
     // text-overflow: ellipsis;
-    
 
     &.collapsed {
       -webkit-line-clamp: 2; // Limit to 2 lines
-     // max-height: 3.2em; // Approximate height for 2 lines (adjust if needed)
+      // max-height: 3.2em; // Approximate height for 2 lines (adjust if needed)
     }
 
     &.expanded {
       -webkit-line-clamp: unset; // Show all text
-    //  max-height: 100%; // Fully expanded
+      //  max-height: 100%; // Fully expanded
     }
   }
 
-  &__readMore {   
+  &__readMore {
     color: $color-lightGreen;
-     
+
     &:hover {
       color: $color-darkGreen;
       cursor: pointer;
-    }    
+    }
   }
 }

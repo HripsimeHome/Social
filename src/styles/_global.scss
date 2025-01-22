@@ -102,39 +102,6 @@ a {
   }
 
 
-  //
-
-  .singlePgeContainer {     
-    display: flex; 
-
-    @include mdScreenMedia {
-      flex-direction: column;
-    }
-  }
-
-  .singleDeskContainer  {
-    display: flex;
-    flex-direction: column;    
-    flex: 1;
-
-    @include mdScreenMedia {
-      margin-bottom: 30px;
-    }
-  }
-
-  .singlePageMainContainer {
-    display: flex;  
-    max-width: 573px;
-    width: 100%;
-    flex: 1; 
-
-    @include mdScreenMedia {
-      max-width: 328px;
-     // flex: 1;
-    }   
-  }
-
-
 // Button panel: white; Light green 
 
 .btnPanel {
