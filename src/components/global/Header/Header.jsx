@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 import styles from "./Header.module.scss";
 import Navbar from "../Navbar/Navbar";
 import { Link } from "react-router-dom";
@@ -16,6 +16,7 @@ import { arrowPrevIcon } from "../../../assets/svg";
 
 const Header = () => {
   const navigate = useNavigate();
+  const location = useLocation();
   const [isExpanded, setIsExpanded] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 
@@ -52,10 +53,14 @@ const Header = () => {
         <div className="container">
           <div className={styles.header__container}>
             <div className={styles.header__logoWrapper}>
-              <Link className={styles.header__backBtm} onClick={handleBackPage}>
-                <Svg id={arrowPrevIcon} />
-              </Link>
-
+            {location.pathname !== homePagePath && (
+                <Link
+                  className={styles.header__backBtm}
+                  onClick={handleBackPage}
+                >
+                  <Svg id={arrowPrevIcon} />
+                </Link>
+              )}
               <div className={styles.header__logoContainer}>
                 <Link to={homePagePath} className={styles.header__logo}>
                   <span>CROWNDING</span>
