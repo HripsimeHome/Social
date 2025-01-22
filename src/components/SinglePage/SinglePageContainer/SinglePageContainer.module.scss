@@ -1,0 +1,32 @@
+@import "../../../styles/mixins";
+@import "../../../styles/vars";
+
+.singlePageContainer {     
+  display: flex; 
+
+  @include mdScreenMedia {
+    flex-direction: column;
+  }
+  
+  &__dashboardContainer  {
+    display: flex;
+    flex-direction: column;    
+    flex: 1;
+
+    @include mdScreenMedia {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__mainContainer {
+    display: flex;  
+    max-width: 573px;
+    width: 100%;
+    flex: 1; 
+
+    @include mdScreenMedia {
+      max-width: 328px;
+     // flex: 1;
+    }   
+  }
+}

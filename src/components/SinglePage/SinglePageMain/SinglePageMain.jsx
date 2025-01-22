@@ -48,8 +48,12 @@ const SinglePageMain = () => {
 
         <ProgressBarFunding
          {...progress}
-        />        
-        <CurrencyPrice />
+        />  
+              
+        <CurrencyPrice 
+          currency="22,500"
+          target="150,000"
+        />
         
         <div className={styles.singlePageMain__deskPanel}>             
 
