@@ -1,25 +1,25 @@
 import { useState } from "react";
-import styles from "./SinglePageDeskAboutProject.module.scss";
+import styles from "./DeskAboutProject.module.scss";
 import ProjectStatusLabel from "../../../layout/ProjectStatusLabel/ProjectStatusLabel";
 
-const SinglePageDeskAboutProject = () => {
+const DeskAboutProject = () => {
   const [isExpanded, setIsExpanded] = useState(false);
   const toggleReadMore = () => setIsExpanded((prev) => !prev);
 
   return (
-    <section className={styles.singlePageDeskAboutProject}>
+    <section className={styles.deskAboutProject}>
       <div
-        className={styles.singlePageDeskAboutProject__projectStatusLContainer}
+        className={styles.deskAboutProject__projectStatusLContainer}
       >
         <ProjectStatusLabel />
       </div>
-      <div className={`${styles.singlePageDeskAboutProject} desk`}>
+      <div className={`${styles.deskAboutProject} desk`}>
         <h3 className="deskTitle">About Project</h3>
-        <p className={styles.singlePageDeskAboutProject__deskText}>
+        <p className={styles.deskAboutProject__deskText}>
           The exciting new VR card game Loftia.
         </p>
         <div
-          className={`${styles.singlePageDeskAboutProject__expandedText} ${
+          className={`${styles.deskAboutProject__expandedText} ${
             isExpanded ? styles.expanded : styles.collapsed
           }`}
           // aria-expanded={isExpanded} // Accessibility for screen readers
@@ -32,7 +32,7 @@ const SinglePageDeskAboutProject = () => {
           survived not only five centuries.
         </div>
         <button
-          className={styles.singlePageDeskAboutProject__readMore}
+          className={styles.deskAboutProject__readMore}
           onClick={toggleReadMore}
           // aria-label={isExpanded ? "Read short" : "Read all"} // Accessibility
         >
@@ -43,4 +43,4 @@ const SinglePageDeskAboutProject = () => {
   );
 };
 
-export default SinglePageDeskAboutProject;
+export default DeskAboutProject;

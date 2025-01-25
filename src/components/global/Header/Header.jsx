@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { useNavigate, useLocation } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import styles from "./Header.module.scss";
 import Navbar from "../Navbar/Navbar";
 import { Link } from "react-router-dom";
@@ -9,17 +9,52 @@ import Svg from "../../layout/Svg/Svg";
 import {
   homePagePath,
   singlePagePath,
+  newProjectPath,
   // allPagePath
 } from "../../../router/path";
 
 import { arrowPrevIcon } from "../../../assets/svg";
+import { gameCards } from "../../../constants/gameCards";
+
+const categoriesList = [
+  "Metaverse",
+  "Privacy",
+  "Stablecoins",
+  "DAOs",
+  "Oracles",
+  "Interoperability",
+  "Cybersecurity",
+  "Meme",
+  "AI",
+  "IoT",
+  "Social",
+  "Identity",
+  "Green",
+  "Cross",
+  "Tokenization",
+  "Payments",
+  "Security",
+  "Infrastructure",
+  "Gaming",
+  "Advertising",
+  "Data",
+  "Launchpads",
+];
 
 const Header = () => {
-  const navigate = useNavigate();
   const location = useLocation();
   const [isExpanded, setIsExpanded] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 
+  let logoText = "CROWNDING";
+
+  if (location.pathname.includes(singlePagePath)) {
+    const id = location.pathname.replace(`${singlePagePath}/`, "");
+
+    const curName = gameCards.find((item) => item.id === +id)?.gameName;
+    if (curName) logoText = curName;
+    
+  }
   useEffect(() => {
     // Detect scroll
     const handleScroll = () => {
@@ -38,11 +73,6 @@ const Header = () => {
     };
   }, []);
 
-  const handleBackPage = () => {
-    //navigate(homePagePath);
-    navigate(-1); 
-  };
-
   const toggleCategory = () => setIsExpanded((prev) => !prev);
 
   return (
@@ -54,18 +84,15 @@ const Header = () => {
           <div className={styles.header__container}>
             <div className={styles.header__logoWrapper}>
               {location.pathname !== homePagePath && (
-              <Link
-                className={styles.header__backBtm}
-                onClick={handleBackPage}
-              >
-                <Svg id={arrowPrevIcon} />
-              </Link>
-            )}
+                <Link to={-1} className={styles.header__backBtm}>
+                  <Svg id={arrowPrevIcon} />
+                </Link>
+              )}
               <div className={styles.header__logoContainer}>
                 <Link to={homePagePath} className={styles.header__logo}>
-                  <span>CROWNDING</span>
+                  <span>{logoText}</span>
                 </Link>
-                  
+
                 <span
                   onClick={toggleCategory}
                   className={styles.header__category}
@@ -75,34 +102,19 @@ const Header = () => {
 
                 <div
                   className={`${styles.header__expendedCategory} ${
-                  isExpanded ? styles.active : ""
+                    isExpanded ? styles.active : ""
                   }`}
                 >
                   <ul className={styles.header__categoryList}>
-                    <li>Metaverse</li>
-                    <li>Privacy</li>
-                    <li>Stablecoins</li>
-                    <li>DAOs</li>
-                    <li>Oracles</li>
-                    <li>Interoperability</li>
-                    <li>Cybersecurity</li>
-                    <li>Meme</li>
-                    <li>AI</li>
-                    <li>IoT</li>
-                    <li>Social</li>
-                    <li>Identity</li>
-                    <li>Green</li>
-                    <li>Cross-chain</li>
-                    <li>Tokenization</li>
-                    <li>Payments</li>
-                    <li>Security Tokens</li>
-                    <li>Infrastructure</li>
-                    <li>Gaming</li>
-                    <li>Advertising</li>
-                    <li>Data Storage</li>
-                    <li>Launchpads</li>                    
+                    {categoriesList.map((item, index) => (
+                      <li key={index}>
+                        <input type="checkbox" /> {item}
+                      </li>
+                    ))}
                   </ul>
-                  <button className={`${styles.header__categoryBtnSave} btnlightGreen`}>
+                  <button
+                    className={`${styles.header__categoryBtnSave} btnlightGreen`}
+                  >
                     Save
                   </button>
                 </div>
@@ -111,11 +123,11 @@ const Header = () => {
 
             <Navbar />
 
-            <Link to={singlePagePath} className={styles.header__menuBtn}>
+            <Link to={newProjectPath} className={styles.header__menuBtn}>
               +
             </Link>
           </div>
-        </div> 
+        </div>
       </header>
     </>
   );
