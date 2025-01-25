@@ -1,12 +1,12 @@
 
 import ProjectPageContainer from "../components/global/ProjectPageContainer/ProjectPageContainer";
 
-const SinglePage = () => {
+const NewProject = () => {
   return (
-    <>
-      <ProjectPageContainer />   
+    <>    
+      <ProjectPageContainer />  
     </>
   );
-};
+} 
 
-export default SinglePage;
+export default NewProject 

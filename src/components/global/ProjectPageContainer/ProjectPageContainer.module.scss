@@ -1,7 +1,7 @@
 @import "../../../styles/mixins";
 @import "../../../styles/vars";
 
-.singlePageContainer {     
+.projectPageContainer {     
   display: flex; 
 
   @include mdScreenMedia {

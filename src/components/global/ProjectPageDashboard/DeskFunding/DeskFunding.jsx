@@ -1,8 +1,8 @@
-import styles from "./SinglePageDeskFunding.module.scss"
+import styles from "./DeskFunding.module.scss"
 import ProgressBarFunding from "../../../layout/ProgressBarFunding/ProgressBarFunding"
 import CurrencyPrice from "../../../layout/CurrencyPrice/CurrencyPrice"
 
-const SinglePageDeskFunding = () => {
+const DeskFunding = () => {
   const progress = {
     bakers: 100,   
     percent: 75,  
@@ -11,8 +11,8 @@ const SinglePageDeskFunding = () => {
 
   return (
     <>
-      <div className={styles.singlePageDeskFunding}>      
-        <div className={`${styles.singlePageDeskFunding} desk`}>
+      <div className={styles.deskFunding}>      
+        <div className={`${styles.deskFunding} desk`}>
           <h3 className="deskTitle">
           Funding
           </h3>
@@ -34,4 +34,4 @@ const SinglePageDeskFunding = () => {
   );
 };
 
-export default SinglePageDeskFunding
+export default DeskFunding
