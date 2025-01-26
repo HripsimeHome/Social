@@ -1,7 +1,7 @@
 import { ReactElement } from "react";
 import HomePage from "../pages/HomePage";
 import SinglePage from "../pages/SinglePage";
-import NewProject from "../pages/NewProject";
+import NewProjectPage from "../pages/NewProjectPage";
 import MusicPage from "../pages/MusicPage";
 import EducationPage from "../pages/EducationPage";
 import TechnologyPage from "../pages/TechnologyPage";
@@ -9,14 +9,17 @@ import AIPage from "../pages/AIPage";
 import ErrorPage from "../pages/ErrorPage";
 import { Navigate } from "react-router-dom";
 
+// Paths
+
 export const homePagePath = "/";
 export const singlePagePath = "/single";
-export const newProjectPath = "/newProject";
+export const newProjectPagePath = "/newProject";
 export const musicPagePath = "/music";
 export const educationPagePath = "/education";
 export const technologyPagePath = "/technology";
 export const aiPagePath = "/ai";
 
+// Routes
 
 export const routes = [
   {
@@ -31,8 +34,8 @@ export const routes = [
   },
 
   {
-    path: newProjectPath,
-    component: <NewProject />,
+    path: newProjectPagePath,
+    component: <NewProjectPage />,
   },
 
   {

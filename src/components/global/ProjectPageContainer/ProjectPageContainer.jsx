@@ -1,18 +1,32 @@
 import styles from "./ProjectPageContainer.module.scss";
+import { useLocation } from "react-router-dom";
 import ProjectPageDashboard from "../ProjectPageDashboard/ProjectPageDashboard";
-import ProjectPageMain from "../ProjectPageMain/ProjectPageMain"
+import SinglePageMain from "../../SinglePage/SinglePageMain/SinglePageMain";
+import NewProjectPageMain from "../../NewProjectPage/NewProjectMain/NewProjectMain";
+
+import {
+  singlePagePath, 
+  newProjectPagePath 
+} 
+ from "../../../router/path";
 
 const ProjectPageContainer = () => {
-  return (   
+  const location = useLocation();
+
+  return (
     <section className={styles.projectPageContainer}>
-      <div className={styles.projectPageContainer__dashboardContainer}>        
+      <div className={styles.projectPageContainer__dashboardContainer}>
         <ProjectPageDashboard />
       </div>
-      <div className={styles.projectPageContainer__mainContainer}>       
-        <ProjectPageMain />
+      <div className={styles.projectPageContainer__mainContainer}>
+        {location.pathname.startsWith(singlePagePath) ? (
+          <SinglePageMain />
+        ) : location.pathname === newProjectPagePath ? (
+          <NewProjectPageMain />
+        ) : null}
       </div>
-    </section>     
+    </section>
   );
-}
+};
 
-export default ProjectPageContainer  
+export default ProjectPageContainer;
