@@ -1,7 +1,7 @@
 
 import ProjectPageContainer from "../components/global/ProjectPageContainer/ProjectPageContainer";
 
-const NewProject = () => {
+const NewProjectPage = () => {
   return (
     <>    
       <ProjectPageContainer />  
@@ -9,4 +9,4 @@ const NewProject = () => {
   );
 } 
 
-export default NewProject 
+export default NewProjectPage 

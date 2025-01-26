@@ -9,7 +9,7 @@ import Svg from "../../layout/Svg/Svg";
 import {
   homePagePath,
   singlePagePath,
-  newProjectPath,
+  newProjectPagePath,
   // allPagePath
 } from "../../../router/path";
 
@@ -123,7 +123,7 @@ const Header = () => {
 
             <Navbar />
 
-            <Link to={newProjectPath} className={styles.header__menuBtn}>
+            <Link to={newProjectPagePath} className={styles.header__menuBtn}>
               +
             </Link>
           </div>
