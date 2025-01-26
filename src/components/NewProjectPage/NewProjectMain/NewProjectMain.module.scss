@@ -1,36 +1,38 @@
 @import "../../../styles/mixins";
 @import "../../../styles/vars";
 
-.singlePageMain {
-  display: flex;
-  flex-direction: column;
-  max-width: 573px;
+.newProjectMain {
+  max-width: 328px;
   width: 100%;
-  flex: 1; 
-  
-   @include mdScreenMedia {
-    //width: 100%;
-  }
 
-  &__deskHeader {
-    @include flexCol(space-between);
+  &__trackingLine {
+    display: flex;
     width: 100%;
-    margin-bottom: 16px;
-  }
+    height: 15px;
+    background-color: #D9D9D9; 
+    border-radius: 25px;
+    margin-bottom: 23px;
+   }
 
-  &__profileImg {    
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    margin-left: -20px;   
-  }  
+   &__slider {
+    background-color: $color-lightGreen;
+    border-radius: 25px;
+    width: 89px;
+   }
 
-  &__deskPanel {    
-    max-width: 273px;
-    margin-top: 24px;
-  }
+   input[type="text"] {
+    width: inherit;   
+    background: transparent; 
+    border: none;
+    outline: none;  
+    @include setFont(16px, 600, $font-family, $color-white);      
+    padding-bottom: 20px;         
 
-  &__panelMargin {
-    margin-bottom: 24px;     
-  }
+    &::placeholder {
+      color: #999; 
+      white-space: normal;      
+    }
+       
+}
+ 
 }

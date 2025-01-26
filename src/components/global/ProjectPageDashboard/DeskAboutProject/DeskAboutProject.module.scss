@@ -2,12 +2,12 @@
 @import "../../../../styles/vars";
 
 .deskAboutProject {
-  max-width: 328px;
-  margin-top: 16px;
+  max-width: 328px; 
   margin-bottom: 16px;
 
   &__projectStatusLContainer {
     @include flexCol();
+    margin-bottom: 16px;
   }
 
   &__deskText {
