@@ -16,34 +16,9 @@ import {
 import { arrowPrevIcon } from "../../../assets/svg";
 import { gameCards } from "../../../constants/gameCards";
 
-const categoriesList = [
-  "Metaverse",
-  "Privacy",
-  "Stablecoins",
-  "DAOs",
-  "Oracles",
-  "Interoperability",
-  "Cybersecurity",
-  "Meme",
-  "AI",
-  "IoT",
-  "Social",
-  "Identity",
-  "Green",
-  "Cross",
-  "Tokenization",
-  "Payments",
-  "Security",
-  "Infrastructure",
-  "Gaming",
-  "Advertising",
-  "Data",
-  "Launchpads",
-];
 
 const Header = () => {
-  const location = useLocation();
-  const [isExpanded, setIsExpanded] = useState(false);
+  const location = useLocation();  
   const [isScrolled, setIsScrolled] = useState(false);
 
   let logoText = "CROWNDING";
@@ -73,8 +48,7 @@ const Header = () => {
     };
   }, []);
 
-  const toggleCategory = () => setIsExpanded((prev) => !prev);
-
+  
   return (
     <>
       <header
@@ -91,33 +65,7 @@ const Header = () => {
               <div className={styles.header__logoContainer}>
                 <Link to={homePagePath} className={styles.header__logo}>
                   <span>{logoText}</span>
-                </Link>
-
-                <span
-                  onClick={toggleCategory}
-                  className={styles.header__category}
-                >
-                  category
-                </span>
-
-                <div
-                  className={`${styles.header__expendedCategory} ${
-                    isExpanded ? styles.active : ""
-                  }`}
-                >
-                  <ul className={styles.header__categoryList}>
-                    {categoriesList.map((item, index) => (
-                      <li key={index}>
-                        <input type="checkbox" /> {item}
-                      </li>
-                    ))}
-                  </ul>
-                  <button
-                    className={`${styles.header__categoryBtnSave} btnlightGreen`}
-                  >
-                    Save
-                  </button>
-                </div>
+                </Link> 
               </div>
             </div>
 

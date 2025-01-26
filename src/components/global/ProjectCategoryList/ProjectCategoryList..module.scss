@@ -1,0 +1,60 @@
+@import "../../../styles/mixins";
+@import "../../../styles/vars";
+
+.projectCategoryList {
+  position: relative;
+  margin-bottom: 16px; 
+
+  &__category {   
+    &:hover {
+      color: $color-darkGreen !important;
+      cursor: pointer;
+    }
+  }
+
+  &__categoryList {
+    overflow: auto;
+    list-style-type: none;
+    @include setFont(13px, 400, $font-family, $color-grey80);
+
+    li {
+      margin-bottom: 7px;
+
+      input[type="checkbox"] {
+        vertical-align: middle;;
+        margin-right: 8px;
+      }
+    }
+  }
+
+  &__categoryBtnSave {
+    @include setFont(12px, 400, $font-family, $color-black);    
+    margin: 15px auto 0;
+    padding: 5px 20px !important;
+  }
+
+
+  &__expendedCategory {
+    display: none;
+    max-width: 210px;
+    width: 100%;
+    height: 400px;
+    position: absolute;
+    top: 30px;
+    z-index: 1;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    overflow-y: hidden;
+    flex-direction: column;
+    background-color: #071f27;
+    border-radius: 20px;
+    padding: 20px 15px;
+
+    &.active {
+      opacity: 1;
+      transform: translateY(0);
+      display: flex;
+    }
+  }
+}
