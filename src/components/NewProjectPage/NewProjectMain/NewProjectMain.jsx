@@ -1,4 +1,5 @@
 import styles from "./NewProjectMain.module.scss";
+import ProjectCategoryList from "../../global/ProjectCategoryList/ProjectCategoryList";
  
 const NewProjectMain = () => {
    
@@ -11,9 +12,10 @@ const NewProjectMain = () => {
           </span>
         </div>
 
+        <ProjectCategoryList />
 
-      <span className="labelPin">CATEGORY</span>
 
+      
         <div className={`${styles.newProjectMain} desk`}>    
 
           <input type="text" placeholder="Project name" /> 
