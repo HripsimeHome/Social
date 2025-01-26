@@ -3,6 +3,7 @@
 
 .projectPageContainer {     
   display: flex; 
+  margin-top: 16px;
 
   @include mdScreenMedia {
     flex-direction: column;
