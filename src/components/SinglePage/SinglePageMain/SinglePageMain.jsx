@@ -11,8 +11,6 @@ import {
 } from "../../../assets/images";
 
 const SinglePageMain = () => {
-
-
   const progress = {
     bakers: 100,
     percent: 15,
@@ -53,26 +51,26 @@ const SinglePageMain = () => {
           <div
             className={`${styles.singlePageMain__panelMargin} btnPanel whitePanel`}
           >
-            <span className="sumPadding">1 USDT</span>
+            <span>1 USDT</span>
             <button className="btnlightGreen">Thanks!</button>
           </div>
 
           <div
             className={`${styles.singlePageMain__panelMargin} btnPanel whitePanel`}
           >
-            <span className="sumPadding">11 USDT</span>
+            <span className="">11 USDT</span>
             <button className="btnlightGreen">0.015%</button>
           </div>
 
           <div
             className={`${styles.singlePageMain__panelMargin} btnPanel whitePanel`}
           >
-            <span className="sumPadding">111 USDT</span>
+            <span>111 USDT</span>
             <span className="btnlightGreen">0.25%</span>
           </div>
 
           <div className="btnPanel lightGreenPanel">
-            <span className="sumPadding">1111 USDT</span>
+            <span>1111 USDT</span>
             <span className="btnlightGreen">2.55%</span>
           </div>
         </div>

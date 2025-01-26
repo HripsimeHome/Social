@@ -26,7 +26,7 @@ const DeskFunding = () => {
         </div>          
 
         <div className="btnPanel lightGreenPanel">
-          <span className="sumPadding">0 USDT</span>
+          <span>0 USDT</span>
           <button className="btnlightGreen">CREATE</button>
         </div>
       </div>      

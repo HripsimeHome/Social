@@ -13,8 +13,6 @@ const NewProjectMain = () => {
         </div>
 
         <ProjectCategoryList />
-
-
       
         <div className={`${styles.newProjectMain} desk`}>    
 
@@ -35,14 +33,14 @@ const NewProjectMain = () => {
           <p>
           Maximum 1000 partners at 0.01% each cryptopay 
           </p>
+        </div> 
 
-
-
-
-
-        </div>
-     
-
+<br />
+         <div className="btnPanel lightGreenPanel">
+          <span>1/5</span>
+          <button className="btnGradientGreen">NEXT</button>
+        </div> 
+        
 
       </section>
     </>
