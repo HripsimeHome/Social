@@ -1,37 +1,30 @@
-import styles from "./DeskFunding.module.scss"
-import ProgressBarFunding from "../../../layout/ProgressBarFunding/ProgressBarFunding"
-import CurrencyPrice from "../../../layout/CurrencyPrice/CurrencyPrice"
+import styles from "./DeskFunding.module.scss";
+import ProgressBarFunding from "../../../layout/ProgressBarFunding/ProgressBarFunding";
+import CurrencyPrice from "../../../layout/CurrencyPrice/CurrencyPrice";
 
 const DeskFunding = () => {
   const progress = {
-    bakers: 100,   
-    percent: 75,  
-    daysToGo: 10, 
+    bakers: 100,
+    percent: 75,
+    daysToGo: 10,
   };
 
   return (
     <>
-      <div className={styles.deskFunding}>      
+      <div className={styles.deskFunding}>
         <div className={`${styles.deskFunding} desk`}>
-          <h3 className="deskTitle">
-          Funding
-          </h3>
-          <ProgressBarFunding 
-            {...progress}            
-          />
-          <CurrencyPrice 
-            currency="0"
-            target="1"
-          /> 
-        </div>          
-
-        <div className="btnPanel lightGreenPanel">
-          <span>0 USDT</span>
-          <button className="btnlightGreen">CREATE</button>
+          <h3 className="deskTitle">Funding</h3>
+          <ProgressBarFunding {...progress} />
+          <CurrencyPrice currency="0" target="1" />
         </div>
-      </div>      
+
+        <div className="greenPanel">
+          <span>0 USDT</span>
+          <button className="btnGreen">CREATE</button>
+        </div>
+      </div>
     </>
   );
 };
 
-export default DeskFunding
+export default DeskFunding;

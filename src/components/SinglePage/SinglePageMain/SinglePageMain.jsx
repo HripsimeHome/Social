@@ -48,30 +48,24 @@ const SinglePageMain = () => {
         <CurrencyPrice currency="22,500" target="150,000" />
 
         <div className={styles.singlePageMain__deskPanel}>
-          <div
-            className={`${styles.singlePageMain__panelMargin} btnPanel whitePanel`}
-          >
+          <div className={`${styles.singlePageMain__panelMargin} whitePanel`}>
             <span>1 USDT</span>
-            <button className="btnlightGreen">Thanks!</button>
+            <button className="btnGreen">Thanks!</button>
           </div>
 
-          <div
-            className={`${styles.singlePageMain__panelMargin} btnPanel whitePanel`}
-          >
-            <span className="">11 USDT</span>
-            <button className="btnlightGreen">0.015%</button>
+          <div className={`${styles.singlePageMain__panelMargin} whitePanel`}>
+            <span>11 USDT</span>
+            <button className="btnGreen">0.015%</button>
           </div>
 
-          <div
-            className={`${styles.singlePageMain__panelMargin} btnPanel whitePanel`}
-          >
+          <div className={`${styles.singlePageMain__panelMargin} whitePanel`}>
             <span>111 USDT</span>
-            <span className="btnlightGreen">0.25%</span>
+            <span className="btnGreen">0.25%</span>
           </div>
 
-          <div className="btnPanel lightGreenPanel">
+          <div className="greenPanel">
             <span>1111 USDT</span>
-            <span className="btnlightGreen">2.55%</span>
+            <span className="btnGreen">2.55%</span>
           </div>
         </div>
       </section>
