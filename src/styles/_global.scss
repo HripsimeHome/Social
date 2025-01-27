@@ -73,89 +73,96 @@ a {
   @include smScreenMedia {
     max-width: 360px;
     //padding-left: 16px;
-   // padding-right: 16px;
+    // padding-right: 16px;
   }
 
   .desk {
-   // width: 100%;
-   // display: flex;
-    background-color: rgba(255, 255, 255, 0.05);  
-    backdrop-filter: blur(30px); 
-    -webkit-backdrop-filter: blur(30px); 
-    @include setFont(12px, 500, $font-family, $color-grey50);  
+    // width: 100%;
+    // display: flex;
+    background-color: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(30px);
+    -webkit-backdrop-filter: blur(30px);
+    @include setFont(12px, 500, $font-family, $color-grey50);
     border-radius: 24px;
     padding: 24px;
   }
 
-  .deskTitle {   
+  .deskTitle {
     @include setFont(16px, 700, $font-family, $color-primary);
-    margin-bottom: 16px;    
+    margin-bottom: 16px;
   }
 
-  .labelPin {     
+  .labelPin {
     background-color: $color-bgLightGreen;
     text-align: center;
-    text-transform: uppercase;   
+    text-transform: uppercase;
     border-radius: 8px;
-    padding: 4px 8px;  
+    padding: 4px 8px;
     @include setFont(14px, 700, $font-family, $color-lightGreen);
   }
 
+  // Button panel: white; Light green
 
-// Button panel: white; Light green 
-
-.btnPanel {
-  @include flexCol(space-between);  
-  @include setFont(16px, 700, $font-family, $color-black);
-  height: 45px;
-  border-radius: 50px; 
-  padding-left: 28px;
-}
-
-.whitePanel {
-  background-color: $color-white;   
-}
-
-.lightGreenPanel {
-  background-color: $color-lightGreen;     
-}
-
-
-.btnlightGreen {
-  background-color: $color-lightGreen;
-  @include setFont(16px, 700, $font-family, $color-black);
-  border-radius: 50px;
-  cursor: pointer;
-  padding: 12px 48px;
-
-   &:hover {
-    background-color: $color-lime; 
-    box-shadow: 0 2px 4px rgba(1, 12, 16,  0.3);
+  .btnPanelContainer {
+    @include flexCol(space-between);
+    @include setFont(16px, 700, $font-family, $color-black);
+    height: 45px;
+    border-radius: 50px;
+    padding-left: 28px;
   }
 
-  &:active {    
-   //transform: translateY(1px);     
-   box-shadow: 0 5px 8px rgba(1, 12, 16, 0.3);
-  }
-}  
-
-
-
-.btnGradientGreen {  
-  background: linear-gradient(to bottom, rgba(199, 254, 98, 1), rgba(255, 255, 255, 1)); 
-  @include setFont(16px, 700, $font-family, $color-black);
-  border-radius: 50px;
-  cursor: pointer;
-  padding: 12px 48px;   
-
-  &:hover {
-    background: linear-gradient(to bottom, rgba(255, 255, 255, 1), rgba(199, 254, 98, 1));   
-    box-shadow: 0 2px 5px rgba(1, 12, 16,  0.3);
+  .btnPanel {
+    @include setFont(16px, 700, $font-family, $color-black);
+    border-radius: 50px;
+    padding: 12px 48px;
   }
 
-  &:active {    
-   box-shadow: 0 4px 8px rgba(1, 12, 16, 0.3);
+  .whitePanel {
+    @extend .btnPanelContainer;
+    background-color: $color-white;    
   }
-}  
 
+  .greenPanel {
+    @extend .btnPanelContainer;
+    background-color: $color-lightGreen;
+  }
+
+  .btnGreen {
+    @extend .btnPanel; 
+    background-color: $color-lightGreen;       
+
+    &:hover {
+      background-color: $color-white;
+      box-shadow: 0 2px 4px rgba(1, 12, 16, 0.3);
+      cursor: pointer;
+    }
+
+    &:active {
+      //transform: translateY(1px);
+      box-shadow: 0 5px 8px rgba(1, 12, 16, 0.3);
+    }
+  }
+
+  .btnGradientGreen {
+    @extend .btnPanel;
+    background: linear-gradient(
+      to bottom,
+      rgba(199, 254, 98, 1),
+      rgba(255, 255, 255, 1)
+    );     
+
+    &:hover {
+      background: linear-gradient(
+        to bottom,
+        rgba(255, 255, 255, 1),
+        rgba(199, 254, 98, 1)
+      );
+      box-shadow: 0 2px 5px rgba(1, 12, 16, 0.3);
+      cursor: pointer;
+    }
+
+    &:active {
+      box-shadow: 0 4px 8px rgba(1, 12, 16, 0.3);
+    }
+  }
 }

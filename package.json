@@ -11,6 +11,7 @@
     "react-scripts": "5.0.1",
     "redux": "^5.0.1",
     "sass": "^1.83.1",
+    "swiper": "^11.2.1",
     "web-vitals": "^4.2.4"
   },
   "scripts": {
