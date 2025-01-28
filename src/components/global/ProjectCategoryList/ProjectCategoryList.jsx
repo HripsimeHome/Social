@@ -51,7 +51,7 @@ const ProjectCategoryList = () => {
         </ul>
         <button
           onClick={toggleCategory}
-          className={`${styles.projectCategoryList__categoryBtnSave} btnlightGreen`}
+          className={`${styles.projectCategoryList__categoryBtnSave} btnGreen`}
         >
           Save
         </button>
