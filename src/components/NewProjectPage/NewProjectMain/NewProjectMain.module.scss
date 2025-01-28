@@ -31,6 +31,11 @@
     width: 89px;
   }
 
+  &__sliderWrapper {
+    min-height: 165px;
+    margin-bottom: 27px;
+  }
+
   input[type="text"] {
     width: 100%;
     background: transparent;
@@ -45,38 +50,12 @@
     }
   }
 
-  &__arrowBtn {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    @include flexCol();
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    transition: $transition;
-    z-index: 3;
-    background: $color-lightGreen;
-    color: $color-white;
-
-    &:hover {
-      background: $color-primary;
-    }
-
-    &_prev {
-     
-      color: white;
-     // background-color: green;
-      margin: 10px 0;
-      cursor: pointer;
-
-    }
-
-    &_next {
-      
-     // background-color: green;
-      color: white;
-      margin-left: 20px;
-      cursor: pointer;
-    }
-  }  
+  &__btnPrev {
+    cursor: pointer;
+    font-weight: bold;
+  }
+  &__swiper-button-disabled {
+    font-weight: bold;
+  }
+  
 }
