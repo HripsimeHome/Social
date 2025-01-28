@@ -16,66 +16,64 @@ const NewProjectMain = () => {
 
       <ProjectCategoryList />
 
-      <div className={`${styles.newProjectMain} desk`}>
-      <div className={styles.newProjectMain__swiperWrapper}>
+     
+            
+      <Swiper
+        modules={[Navigation]}
+        spaceBetween={20}
+        slidesPerView={1}
+        navigation={{
+          nextEl: ".btnNext",
+          prevEl: ".btnPrev",
+        }}
+        loop={false}
+        onSlideChange={() => console.log("Slide changed")}
+        onSwiper={(swiper) => console.log("Swiper instance:", swiper)}
+      >
+       
+        <SwiperSlide>
+          <div className="desk">
+            <input type="text" placeholder="Project name" />
+            <p>
+              Write 100 keywords first and another 5000 words with all the
+              advantages of the project. Also, take into account that 5 categories
+              will be allowed, integrated individually.
+            </p>
+          </div>
+        </SwiperSlide>
         
-        {/* Custom navigation buttons */}
-        <button className={styles.newProjectMain__arrowBtn_prev}>Prev</button>
-        <button className={styles.newProjectMain__arrowBtn_next}>Next</button>
+        <SwiperSlide>
+          <div className="desk">
+            <input type="text" placeholder="How much do you need to invest?" />
+            <p>Percentage of the company for partners and future profits.</p>
+          </div>
+        </SwiperSlide>
+        
+        <SwiperSlide>
+          <div className="desk">
+            <input
+              type="text"
+              placeholder="How many people do you need as partners?"
+            />
+            <p>Maximum 1000 partners at 0.01% each in cryptopay.</p>
+          </div>
+        </SwiperSlide>   
 
-        <Swiper
-          modules={[Navigation]}
-          spaceBetween={20}
-          slidesPerView={1}
-          navigation={{
-            nextEl: `.${styles.newProjectMain__arrowBtn_next}`,
-            prevEl: `.${styles.newProjectMain__arrowBtn_prev}`,
-          }}
-          loop={false}
-          onSlideChange={() => console.log("Slide changed")}
-          onSwiper={(swiper) => console.log("Swiper instance:", swiper)}
-        >
-          {/* Slide 1 */}
-          <SwiperSlide>
-            <div className={styles.newProjectMain__slide}>
-              <input type="text" placeholder="Project name" />
-              <p>
-                Write 100 keywords first and another 5000 words with all the
-                advantages of the project. Also, take into account that 5 categories
-                will be allowed, integrated individually.
-              </p>
-            </div>
-          </SwiperSlide>
-
-          {/* Slide 2 */}
-          <SwiperSlide>
-            <div className={styles.newProjectMain__slide}>
-              <input type="text" placeholder="How much do you need to invest?" />
-              <p>Percentage of the company for partners and future profits.</p>
-            </div>
-          </SwiperSlide>
-
-          {/* Slide 3 */}
-          <SwiperSlide>
-            <div className={styles.newProjectMain__slide}>
-              <input
-                type="text"
-                placeholder="How many people do you need as partners?"
-              />
-              <p>Maximum 1000 partners at 0.01% each in cryptopay.</p>
-            </div>
-          </SwiperSlide>
-
-          <br />
-        <div className="greenPanel">
-          <span>1/5</span>
-          <button className="btnGradientGreen">NEXT</button>
-        </div>
-        </Swiper>
-      </div>
-      </div>
+<br />
+         <div className="greenPanel">
+        <button className="btnPrev">BACK 1/5</button>          
+        <button className="btnNext btnGradientGreen">NEXT</button>
+      </div>     
+      </Swiper>    
     </section>
   );
 };
 
 export default NewProjectMain;
+
+
+{/*
+   <div className="greenPanel">
+          <button className="btnPrev">BACK 1/5</button>          
+          <button className="btnNext btnGradientGreen">NEXT</button>
+        </div>*/}
