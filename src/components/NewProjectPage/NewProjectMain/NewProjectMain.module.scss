@@ -11,11 +11,6 @@
     width: 100%; 
   }
 
-  /*
-  &__swiperWrapper {
-     max-width: 328px;
-  }
-*/
   &__trackingLine {
     display: flex;
     width: 100%;
@@ -29,6 +24,16 @@
     background-color: $color-lightGreen;
     border-radius: 25px;
     width: 89px;
+    transition: width 0.3s ease-in-out;
+  }
+
+  &__categoryListWrapper {
+    height: 40px;     
+    visibility: hidden;    
+      &.visible {
+      height: 40px;  
+      visibility: visible;
+    }    
   }
 
   &__sliderWrapper {
@@ -54,8 +59,13 @@
     cursor: pointer;
     font-weight: bold;
   }
+
   &__swiper-button-disabled {
     font-weight: bold;
   }
+  
+
+
+ 
   
 }
