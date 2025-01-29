@@ -10,6 +10,7 @@ import "swiper/css";
 
 const NewProjectMain = () => {
   const navigate = useNavigate();
+  const [currentIndex, setCurrentIndex] = useState(0);
 
   const slideData = [
     {
@@ -26,59 +27,77 @@ const NewProjectMain = () => {
       description: "Maximum 1000 partners at 0.01% each in cryptopay.",
     },
     {
-      placeholder: "Additional Details",
-      description: "Provide more information about your project's vision.",
+      placeholder: "", // Empty slide so Swiper reaches index 3
+      description: "",
     },
   ];
 
-
-  const [currentIndex, setCurrentIndex] = useState(0);
+  const currencyData = [
+    { usdtData: 1, usdtText: "Thanks!" },
+    { usdtData: 11, usdtText: "0.015%" },
+    { usdtData: 111, usdtText: "0.25%" },
+    { usdtData: 1111, usdtText: "2.55%" },
+  ];
 
   return (
     <section className={styles.newProjectMain}>
+      {/* Category List - Visible Only on First Slide */}
       <div
-        className={`${styles.newProjectMain__categoryListWrapper} ${currentIndex === 0 ? styles.visible : ""}`}>
+        className={`${styles.newProjectMain__categoryListWrapper} ${
+          currentIndex === 0 ? styles.visible : ""
+        }`}
+      >
         <ProjectCategoryList />
-      </div>        
-
-     {/*}
-      <div className={styles.newProjectMain__trackingLine}>
-        <span className={styles.newProjectMain__slider}></span>
       </div>
-      */}
 
-    
+      {/* Progress Bar */}
+      <div className={styles.newProjectMain__trackingLine}>
+        <span
+          className={styles.newProjectMain__slider}
+          style={{ width: `${20 + currentIndex * 23}%` }}
+        ></span>
+      </div>
 
-<div className={styles.newProjectMain__trackingLine}>
-  <span 
-    className={styles.newProjectMain__slider} 
-    style={{ width: `${20 + currentIndex * 20}%` }}
-  ></span>
-</div>
+      {/* Slider Wrapper */}
+      <div className={styles.newProjectMain__sliderWrapper}>
+        {/* Panels are displayed when we are on the last slide */}
+        {currentIndex === 3 && (
+          <>
+            {currencyData.map((panel, index) => (
+              <div
+                key={index}
+                className={`${styles.newProjectMain__panelMargin} whitePanel`}
+              >
+                <span>{panel.usdtData} USDT</span>
+                <span className="btnGreen">{panel.usdtText}</span>
+              </div>
+            ))}
+          </>
+        )}
 
-
-           
-      <div className={`${styles.newProjectMain__sliderWrapper} desk`}>
-        <Swiper
-          modules={[Navigation]}
-          spaceBetween={20}
-          slidesPerView={1}
-          navigation={{
-            nextEl: ".btnNext",
-            prevEl: ".btnPrev",
-          }}
-          loop={false}
-          onSlideChange={(swiper) => {
-            setCurrentIndex(swiper.activeIndex);
-          }}
-        >
-          {slideData.map((slide, index) => (
-            <SwiperSlide key={index}>
-              <input type="text" placeholder={slide.placeholder} />
-              <p>{slide.description}</p>
-            </SwiperSlide>
-          ))}
-        </Swiper>
+        {/* Swiper stays inside 'desk', but class 'desk' is conditionally removed on the last slide */}
+        <div className={currentIndex === 3 ? "" : "desk"}>
+          <Swiper
+            modules={[Navigation]}
+            spaceBetween={20}
+            slidesPerView={1}
+            navigation={{
+              nextEl: ".btnNext",
+              prevEl: ".btnPrev",
+            }}
+            loop={false}
+            onSlideChange={(swiper) => {
+              setCurrentIndex(swiper.activeIndex);
+            }}
+          >
+            {slideData.map((slide, index) => (
+              <SwiperSlide key={index}>
+                {slide.placeholder && <input type="text" placeholder={slide.placeholder} />}
+                {slide.description && <p>{slide.description}</p>}
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        </div>
       </div>
 
       {/* Navigation Buttons */}
@@ -87,16 +106,25 @@ const NewProjectMain = () => {
           {currentIndex === 0 ? "1/5" : `BACK ${currentIndex + 1}/5`}
         </button>
 
+      {/*  <button className="btnNext btnGradientGreen">
+          {currentIndex === 3 ? "PUBLIC" : "NEXT"}
+        </button>
+
+        */}
+
         <button
           className="btnNext btnGradientGreen"
-          onClick={() => {
-            if (currentIndex === slideData.length - 1) {
-              navigate(homePagePath); 
-            }
-          }}
+          
+         // onClick={() => {
+            //if (currentIndex === slideData.length - 1) {
+             // navigate(homePagePath); 
+           // }
+         // }}
         >
           {currentIndex === slideData.length - 1 ? "PUBLIC" : "NEXT"}
         </button>
+
+        
       </div>
     </section>
   );
