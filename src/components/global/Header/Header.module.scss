@@ -7,9 +7,21 @@
   left: 0;
   width: 100%;
   transition: $transition;
-  z-index: 1;
+  z-index: 1; 
   padding-top: 78px;
   padding-bottom: 60px;
+
+ /*
+   height: 101px;
+   padding-top: 30px;
+  @include bgWebp(
+    "../assets/images/header/headerBg.png",
+    "../assets/images/header/headerBg.webp"
+  );
+  background: no-repeat center top;
+  background-color: #010c10;
+*/
+
 
   @include xlScreenMedia {
     //padding: 3% 20px;

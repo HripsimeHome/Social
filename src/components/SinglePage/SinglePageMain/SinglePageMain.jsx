@@ -25,6 +25,28 @@ const SinglePageMain = () => {
     profilePhoto5Image,
   ];
 
+const currencyData = [
+  {
+    usdtData: 1,
+    usdtText: "Thanks!"
+  },
+
+  {
+    usdtData: 11,
+    usdtText: "0.015%"
+  },
+
+  {
+    usdtData: 111,
+    usdtText: "0.25%"
+  },
+
+  {
+    usdtData: 1111,
+    usdtText: "2.55%"
+  }  
+]
+
   return (
     <>
       <section className={`${styles.singlePageMain} desk`}>
@@ -48,25 +70,24 @@ const SinglePageMain = () => {
         <CurrencyPrice currency="22,500" target="150,000" />
 
         <div className={styles.singlePageMain__deskPanel}>
-          <div className={`${styles.singlePageMain__panelMargin} whitePanel`}>
-            <span>1 USDT</span>
-            <button className="btnGreen">Thanks!</button>
-          </div>
 
-          <div className={`${styles.singlePageMain__panelMargin} whitePanel`}>
-            <span>11 USDT</span>
-            <button className="btnGreen">0.015%</button>
-          </div>
+        {currencyData.map(( panel, index ) => (
+          <div className={`${styles.singlePageMain__panelMargin} whitePanel`}>        
 
-          <div className={`${styles.singlePageMain__panelMargin} whitePanel`}>
-            <span>111 USDT</span>
-            <span className="btnGreen">0.25%</span>
+            <span ke={index}>{panel.usdtData} USDT</span>
+            <span className="btnGreen">{panel.usdtText}</span>
           </div>
+        ))}
+ 
 
+
+<br />
+<br />
           <div className="greenPanel">
             <span>1111 USDT</span>
             <span className="btnGreen">2.55%</span>
           </div>
+
         </div>
       </section>
     </>

@@ -1,3 +1,6 @@
+import headerBgImage from "./images/header/headerBg.png";
+import headerBgWebpImage from "./images/header/headerBg.webp";
+
 // Home
 
 import avatarImage from "./images/header/avatar.jpg";
@@ -18,6 +21,10 @@ import profilePhoto5Image from "./images/profile/profilePhoto5.jpg"
 
 
 export {
+
+  headerBgImage, 
+  headerBgWebpImage,
+
   // Home
   avatarImage,
 

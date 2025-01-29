@@ -166,19 +166,13 @@ a {
     }
   }
   .btnPrev {
+    @include setFont(16px, 700, $font-family, $color-black);
+    cursor: pointer;
+  }
+  .swiper-button-disabled {
     font-weight: bold;
+    cursor: default;
   }
-  .projectCategoryListWrapper {
-    visibility: hidden;
-    position: absolute;
-    width: 100%; // or adjust the width as per your layout
-    height: auto;
-    transition: visibility 0.3s ease-in-out, position 0s 0.3s;
-  }
+
   
-  .projectCategoryListWrapper.visible {
-    visibility: visible;
-    position: relative;
-    transition: visibility 0.3s ease-in-out, position 0s;
-  }
 }
