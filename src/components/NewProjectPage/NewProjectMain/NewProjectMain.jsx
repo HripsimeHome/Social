@@ -13,14 +13,17 @@ const slideData = [
     placeholder: "Project name",
     description:
       "Write 100 keywords first and another 5000 words with all the advantages of the project. Also, take into account that 5 categories will be allowed, integrated individually.",
+    key: "name",
   },
   {
     placeholder: "How much do you need to invest?",
     description: "Percentage of the company for partners and future profits.",
+    key: "invest",
   },
   {
     placeholder: "How many people do you need as partners?",
     description: "Maximum 1000 partners at 0.01% each in cryptopay.",
+    key: "partnersCount",
   },
   {
     placeholder: "", // Empty slide so Swiper reaches index 3
@@ -47,7 +50,7 @@ const currencyData = [
   },
 ];
 
-const NewProjectMain = () => {
+const NewProjectMain = ({ formData, setFormData }) => {
   const navigate = useNavigate();
   const [currentIndex, setCurrentIndex] = useState(0);
   const [publishEnable, setPublishEnable] = useState(false);
@@ -58,7 +61,12 @@ const NewProjectMain = () => {
     }
   }, [currentIndex]);
 
-  console.log(currentIndex, slideData.length - 1);
+  const onChange = (e) => {
+    setFormData((prevState) => ({
+      ...prevState,
+      [e.target.name]: e.target.value,
+    }));
+  };
 
   return (
     <section className={styles.newProjectMain}>
@@ -118,11 +126,11 @@ const NewProjectMain = () => {
             {slideData.map((slide, index) => (
               <SwiperSlide key={index}>
                 <input
+                  name={slide.key}
+                  value={formData[slide.key]}
+                  onChange={onChange}
                   type="text"
                   placeholder={slide.placeholder}
-                  // onChange={(e) => {
-                  // if (index === 0) setProjectName(e.target.value); // Only update for //first slide
-                  // }}
                 />
                 <p>{slide.description}</p>
               </SwiperSlide>

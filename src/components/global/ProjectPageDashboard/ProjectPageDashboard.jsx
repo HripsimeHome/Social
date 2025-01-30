@@ -1,15 +1,13 @@
+import DeskAboutProject from "./DeskAboutProject/DeskAboutProject";
+import DeskFunding from "./DeskFunding/DeskFunding";
 
-import DeskAboutProject from "./DeskAboutProject/DeskAboutProject"
-import DeskFunding from "./DeskFunding/DeskFunding"
- 
 const ProjectPageDashboard = () => {
   return (
     <>
       <DeskAboutProject />
-      {/*<DeskAboutProject projectName={projectName} />  */}
-      <DeskFunding />    
+      <DeskFunding />
     </>
   );
 };
 
-export default ProjectPageDashboard
+export default ProjectPageDashboard;

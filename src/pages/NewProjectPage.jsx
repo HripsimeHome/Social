@@ -1,12 +1,11 @@
-
-import ProjectPageContainer from "../components/global/ProjectPageContainer/ProjectPageContainer";
+import NewProjectWrapper from "../components/NewProjectPage/NewProjectWrapper/NewProjectWrapper";
 
 const NewProjectPage = () => {
   return (
-    <>    
-      <ProjectPageContainer />  
+    <>
+      <NewProjectWrapper />
     </>
   );
-} 
+};
 
-export default NewProjectPage 
+export default NewProjectPage;

@@ -25,24 +25,24 @@ const SinglePageMain = () => {
     profilePhoto5Image,
   ];
 
-const currencyData = [
-  {
-    usdtData: 1,
-    usdtText: "Thanks!"
-  },
-  {
-    usdtData: 11,
-    usdtText: "0.015%"
-  },
-  {
-    usdtData: 111,
-    usdtText: "0.25%"
-  },
-  {
-    usdtData: 1111,
-    usdtText: "2.55%"
-  }  
-]
+  const currencyData = [
+    {
+      usdtData: 1,
+      usdtText: "Thanks!",
+    },
+    {
+      usdtData: 11,
+      usdtText: "0.015%",
+    },
+    {
+      usdtData: 111,
+      usdtText: "0.25%",
+    },
+    {
+      usdtData: 1111,
+      usdtText: "2.55%",
+    },
+  ];
 
   return (
     <>
@@ -55,7 +55,7 @@ const currencyData = [
               <img
                 src={image}
                 key={index}
-                alt="Profile image"
+                alt="Profile"
                 className={styles.singlePageMain__profileImg}
               />
             ))}
@@ -67,20 +67,20 @@ const currencyData = [
         <CurrencyPrice currency="22,500" target="150,000" />
 
         <div className={styles.singlePageMain__deskPanel}>
+          {currencyData.map((panel, index) => (
+            <div
+              key={index}
+              className={`${styles.singlePageMain__panelMargin} whitePanel`}
+            >
+              <span>{panel.usdtData} USDT</span>
+              <span className="btnGreen">{panel.usdtText}</span>
+            </div>
+          ))}
 
-        {currencyData.map(( panel, index ) => (
-          <div className={`${styles.singlePageMain__panelMargin} whitePanel`}>        
-
-            <span ke={index}>{panel.usdtData} USDT</span>
-            <span className="btnGreen">{panel.usdtText}</span>
-          </div>
-        ))}
- 
           <div className="greenPanel">
             <span>1111 USDT</span>
             <span className="btnGreen">2.55%</span>
           </div>
-
         </div>
       </section>
     </>

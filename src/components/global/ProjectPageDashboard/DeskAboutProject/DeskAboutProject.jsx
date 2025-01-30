@@ -1,16 +1,12 @@
 import { useState } from "react";
 import styles from "./DeskAboutProject.module.scss";
 import ProjectStatusLabel from "../../../layout/ProjectStatusLabel/ProjectStatusLabel";
-import { useLocation } from "react-router-dom"
+import { useLocation } from "react-router-dom";
 
-import {
-  singlePagePath, 
-  newProjectPagePath 
-} 
- from "../../../../router/path";
+import { singlePagePath, newProjectPagePath } from "../../../../router/path";
 
 //const DeskAboutProject = ({ projectName  }) => {
-  const DeskAboutProject = () => {
+const DeskAboutProject = ({ nameValue }) => {
   const location = useLocation();
 
   const [isExpanded, setIsExpanded] = useState(false);
@@ -18,25 +14,17 @@ import {
 
   return (
     <section className={styles.deskAboutProject}>
-      <div
-        className={styles.deskAboutProject__projectStatusLContainer}
-      >
+      <div className={styles.deskAboutProject__projectStatusLContainer}>
         <ProjectStatusLabel />
       </div>
       <div className={`${styles.deskAboutProject} desk`}>
         <h3 className="deskTitle">
-          {location.pathname.startsWith(singlePagePath) ? (
-         // {projectName || "About Project"}
-          
-        "About Project"
-          ) : location.pathname === newProjectPagePath ? (
-
-          "New project"
-          ) : null
-        }         
+          {location.pathname.startsWith(singlePagePath)
+            ? "About Project"
+            : location.pathname === newProjectPagePath
+            ? nameValue || "New project"
+            : null}
         </h3>
-       
-
 
         <p className={styles.deskAboutProject__deskText}>
           The exciting new VR card game Loftia.
@@ -63,8 +51,6 @@ import {
         >
           {isExpanded ? "read short" : "read all"}
         </button>
-
-
       </div>
     </section>
   );
