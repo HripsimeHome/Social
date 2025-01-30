@@ -1,10 +1,9 @@
-
 import ProjectPageContainer from "../components/global/ProjectPageContainer/ProjectPageContainer";
 
 const SinglePage = () => {
   return (
     <>
-      <ProjectPageContainer />   
+      <ProjectPageContainer />
     </>
   );
 };
