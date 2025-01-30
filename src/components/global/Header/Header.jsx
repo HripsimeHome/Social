@@ -16,20 +16,26 @@ import {
 import { arrowPrevIcon } from "../../../assets/svg";
 import { gameCards } from "../../../constants/gameCards";
 
-
 const Header = () => {
-  const location = useLocation();  
+  const location = useLocation();
   const [isScrolled, setIsScrolled] = useState(false);
 
   let logoText = "CROWNDING";
 
-  if (location.pathname.includes(singlePagePath)) {
+  const isHomePage = location.pathname === homePagePath;
+  const isNewProjectPage = location.pathname === newProjectPagePath;
+  const isSinglePage = location.pathname.includes(singlePagePath);
+
+  if (isSinglePage) {
     const id = location.pathname.replace(`${singlePagePath}/`, "");
 
     const curName = gameCards.find((item) => item.id === +id)?.gameName;
     if (curName) logoText = curName;
-    
   }
+  if (isNewProjectPage) {
+    logoText = "NEW PROJECT";
+  }
+
   useEffect(() => {
     // Detect scroll
     const handleScroll = () => {
@@ -48,7 +54,6 @@ const Header = () => {
     };
   }, []);
 
-  
   return (
     <>
       <header
@@ -63,9 +68,17 @@ const Header = () => {
                 </Link>
               )}
               <div className={styles.header__logoContainer}>
-                <Link to={homePagePath} className={styles.header__logo}>
+                <Link
+                  to={homePagePath}
+                  className={`${isHomePage ? styles.header__logo_lg : ""} ${
+                    styles.header__logo
+                  }`}
+                >
                   <span>{logoText}</span>
-                </Link> 
+                </Link>
+                {isSinglePage && (
+                  <span className={styles.header__category}>video game</span>
+                )}
               </div>
             </div>
 

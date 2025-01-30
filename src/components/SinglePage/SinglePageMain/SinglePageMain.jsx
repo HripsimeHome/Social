@@ -30,17 +30,14 @@ const currencyData = [
     usdtData: 1,
     usdtText: "Thanks!"
   },
-
   {
     usdtData: 11,
     usdtText: "0.015%"
   },
-
   {
     usdtData: 111,
     usdtText: "0.25%"
   },
-
   {
     usdtData: 1111,
     usdtText: "2.55%"
@@ -79,10 +76,6 @@ const currencyData = [
           </div>
         ))}
  
-
-
-<br />
-<br />
           <div className="greenPanel">
             <span>1111 USDT</span>
             <span className="btnGreen">2.55%</span>

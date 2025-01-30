@@ -5,7 +5,8 @@ import DeskFunding from "./DeskFunding/DeskFunding"
 const ProjectPageDashboard = () => {
   return (
     <>
-      <DeskAboutProject />  
+      <DeskAboutProject />
+      {/*<DeskAboutProject projectName={projectName} />  */}
       <DeskFunding />    
     </>
   );

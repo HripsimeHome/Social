@@ -1,8 +1,18 @@
 import { useState } from "react";
 import styles from "./DeskAboutProject.module.scss";
 import ProjectStatusLabel from "../../../layout/ProjectStatusLabel/ProjectStatusLabel";
+import { useLocation } from "react-router-dom"
 
-const DeskAboutProject = () => {
+import {
+  singlePagePath, 
+  newProjectPagePath 
+} 
+ from "../../../../router/path";
+
+//const DeskAboutProject = ({ projectName  }) => {
+  const DeskAboutProject = () => {
+  const location = useLocation();
+
   const [isExpanded, setIsExpanded] = useState(false);
   const toggleReadMore = () => setIsExpanded((prev) => !prev);
 
@@ -14,10 +24,24 @@ const DeskAboutProject = () => {
         <ProjectStatusLabel />
       </div>
       <div className={`${styles.deskAboutProject} desk`}>
-        <h3 className="deskTitle">About Project</h3>
+        <h3 className="deskTitle">
+          {location.pathname.startsWith(singlePagePath) ? (
+         // {projectName || "About Project"}
+          
+        "About Project"
+          ) : location.pathname === newProjectPagePath ? (
+
+          "New project"
+          ) : null
+        }         
+        </h3>
+       
+
+
         <p className={styles.deskAboutProject__deskText}>
           The exciting new VR card game Loftia.
         </p>
+
         <div
           className={`${styles.deskAboutProject__expandedText} ${
             isExpanded ? styles.expanded : styles.collapsed
@@ -31,6 +55,7 @@ const DeskAboutProject = () => {
           a galley of type and scrambled it to make a type specimen book. It has
           survived not only five centuries.
         </div>
+
         <button
           className={styles.deskAboutProject__readMore}
           onClick={toggleReadMore}
@@ -38,6 +63,8 @@ const DeskAboutProject = () => {
         >
           {isExpanded ? "read short" : "read all"}
         </button>
+
+
       </div>
     </section>
   );
