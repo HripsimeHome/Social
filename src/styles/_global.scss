@@ -119,7 +119,7 @@ a {
 
   .whitePanel {
     @extend .btnPanelContainer;
-    background-color: $color-white;    
+    background-color: $color-white;
   }
 
   .greenPanel {
@@ -128,8 +128,8 @@ a {
   }
 
   .btnGreen {
-    @extend .btnPanel; 
-    background-color: $color-lightGreen;       
+    @extend .btnPanel;
+    background-color: $color-lightGreen;
 
     &:hover {
       background-color: $color-white;
@@ -145,11 +145,12 @@ a {
 
   .btnGradientGreen {
     @extend .btnPanel;
+    cursor: pointer;
     background: linear-gradient(
       to bottom,
       rgba(199, 254, 98, 1),
       rgba(255, 255, 255, 1)
-    );     
+    );
 
     &:hover {
       background: linear-gradient(
@@ -173,6 +174,4 @@ a {
     font-weight: bold;
     cursor: default;
   }
-
-  
 }

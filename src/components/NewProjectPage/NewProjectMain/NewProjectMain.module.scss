@@ -2,13 +2,11 @@
 @import "../../../styles/vars";
 
 .newProjectMain {
- // max-width: 617px;
- // width: 100%; 
-  //margin: 0 auto;
-   max-width: 328px;
+  width: 100%;
+  max-width: 328px;
 
   @include smScreenMedia {
-    width: 100%; 
+    width: 100%;
   }
 
   &__trackingLine {
@@ -28,17 +26,22 @@
   }
 
   &__categoryListWrapper {
-    height: 40px;     
-    visibility: hidden;    
-      &.visible {
-      height: 40px;  
+    height: 40px;
+    visibility: hidden;
+
+    &.visible {
+      height: 40px;
       visibility: visible;
-    }    
+    }
   }
 
   &__sliderWrapper {
     min-height: 165px;
     margin-bottom: 27px;
+  }
+
+  &__hideSwiper {
+    display: none;
   }
 
   input[type="text"] {
@@ -48,7 +51,7 @@
     outline: none;
     @include setFont(16px, 600, $font-family, $color-white);
     padding-bottom: 20px;
-    min-height: 55px;;
+    min-height: 55px;
 
     &::placeholder {
       color: #999;
@@ -59,19 +62,13 @@
   &__btnPrev {
     cursor: pointer;
     @include setFont(16px, 700, $font-family, $color-black);
-    
+
     &.swiper-button-disabled {
       font-weight: bold;
     }
   }
 
-  &__btnNext {
-    cursor: pointer;
-  } 
-   
-  
   &__panelMargin {
-    margin-bottom: 24px;     
+    margin-bottom: 24px;
   }
-  
 }
