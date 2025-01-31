@@ -1,35 +1,39 @@
 import {
-    homePagePath, 
-    musicPagePath,
-    educationPagePath,
-    technologyPagePath,
-    aiPagePath
-} from "../router/path"
+  homePagePath,
+  futuresPagePath,
+  positionPagePath,
+  crypto500PagePath,
+  usdtPagePath,
+} from "../router/path";
 
-export const menuItems = [ 
+export const menuItems = [
+  {
+    link: homePagePath,
+    text: "",
+   // text: "All",
+  },
 
-    {
-        link: homePagePath,
-        text: "All",  
-    },
+  {
+    link: "https://crypto-tg-bot.vercel.app",
+    text: "Futures",
+  },
 
-    {
-        link: musicPagePath,
-        text: "Music",  
-    },
+  {
+    link: "https://crypto-tg-bot.vercel.app/orders",
+    text: "Position",
+  },
 
-    {
-        link: educationPagePath,
-        text: "Education",  
-    },
+  {
+    link: "https://crypto-tg-bot.vercel.app/currencies",
+    text: "Crypto 500",
+  },
 
-    {
-        link: technologyPagePath,
-        text: "Technology",  
-    },
-
-    {
-        link: aiPagePath,
-        text: "AI",  
-    },
+  {
+    link: "https://crypto-tg-bot.vercel.app/profile",
+    text: "0 USDT",
+  },
+  {
+    link: homePagePath,
+    text: "CROW"
+  }
 ];

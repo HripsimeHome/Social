@@ -2,10 +2,10 @@ import { ReactElement } from "react";
 import HomePage from "../pages/HomePage";
 import SinglePage from "../pages/SinglePage";
 import NewProjectPage from "../pages/NewProjectPage";
-import MusicPage from "../pages/MusicPage";
-import EducationPage from "../pages/EducationPage";
-import TechnologyPage from "../pages/TechnologyPage";
-import AIPage from "../pages/AIPage";
+import FuturesPage from "../pages/FuturesPage";
+import PositionPage from "../pages/PositionPage";
+import Crypto500Page from "../pages/Crypto500Page";
+import UsdtPage from "../pages/UsdtPage";
 import ErrorPage from "../pages/ErrorPage";
 import { Navigate } from "react-router-dom";
 
@@ -14,10 +14,10 @@ import { Navigate } from "react-router-dom";
 export const homePagePath = "/";
 export const singlePagePath = "/single";
 export const newProjectPagePath = "/newProject";
-export const musicPagePath = "/music";
-export const educationPagePath = "/education";
-export const technologyPagePath = "/technology";
-export const aiPagePath = "/ai";
+export const futuresPagePath = "/futures";
+export const positionPagePath = "/position";
+export const crypto500PagePath = "/crypto500";
+export const usdtPagePath = "/usdt";
 
 // Routes
 
@@ -39,23 +39,23 @@ export const routes = [
   },
 
   {
-    path: musicPagePath,
-    component: <MusicPage />,
+    path: futuresPagePath,
+    component: <FuturesPage />,
   },
 
   {
-    path: educationPagePath,
-    component: <EducationPage />,
+    path: positionPagePath,
+    component: <PositionPage />,
   },
 
   {
-    path: technologyPagePath,
-    component: <TechnologyPage />,
+    path: crypto500PagePath,
+    component: <Crypto500Page />,
   },
 
   {
-    path: aiPagePath,
-    component: <AIPage />,
+    path: usdtPagePath,
+    component: <UsdtPage />,
   },
 
   {

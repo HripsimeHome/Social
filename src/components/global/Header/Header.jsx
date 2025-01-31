@@ -9,8 +9,7 @@ import Svg from "../../layout/Svg/Svg";
 import {
   homePagePath,
   singlePagePath,
-  newProjectPagePath,
-  // allPagePath
+  newProjectPagePath  
 } from "../../../router/path";
 
 import { arrowPrevIcon } from "../../../assets/svg";
@@ -63,12 +62,13 @@ const Header = () => {
           <div className={styles.header__container}>
             <div className={styles.header__logoWrapper}>
               {location.pathname !== homePagePath && (
-                <Link to={-1} className={styles.header__backBtm}>
+                <Link to={-1} className={styles.header__backBtn}>
                   <Svg id={arrowPrevIcon} />
                 </Link>
               )}
               <div className={styles.header__logoContainer}>
-                <Link
+              
+              {/*  <Link
                   to={homePagePath}
                   className={`${isHomePage ? styles.header__logo_lg : ""} ${
                     styles.header__logo
@@ -76,6 +76,11 @@ const Header = () => {
                 >
                   <span>{logoText}</span>
                 </Link>
+                */}
+                <span className={`${isHomePage ? styles.header__logo_lg : ""} ${
+                    styles.header__logo
+                  }`}>{logoText}</span>
+
                 {isSinglePage && (
                   <span className={styles.header__category}>video game</span>
                 )}
