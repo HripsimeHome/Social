@@ -16,11 +16,11 @@ const Navbar = () => {
           {menuItems.map(({ link, text }, index) => (
             <NavLink
               to={link}
-              key={index}
+              key={index}            
               className={({ isActive }) =>
-                isActive
-                  ? `${styles.navbar__menuLink} ${styles.navbar__menuLink_active}`
-                  : styles.navbar__menuLink
+                `${styles.navbar__menuLink} 
+                 ${isActive ? styles.navbar__menuLink_active : ""} 
+                 ${text === "CROW" ? styles.navbar__crow : ""}`
               }
             >
               {text}

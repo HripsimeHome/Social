@@ -2,12 +2,8 @@
 @import "../../../styles/vars";
 
 .newProjectMain {
-  width: 100%;
   max-width: 328px;
-
-  @include smScreenMedia {
-    width: 100%;
-  }
+  width: 100%;  
 
   &__trackingLine {
     display: flex;
@@ -51,7 +47,7 @@
     outline: none;
     @include setFont(16px, 600, $font-family, $color-white);
     padding-bottom: 20px;
-    min-height: 55px;
+    //min-height: 55px;
 
     &::placeholder {
       color: #999;
@@ -66,9 +62,5 @@
     &.swiper-button-disabled {
       font-weight: bold;
     }
-  }
-
-  &__panelMargin {
-    margin-bottom: 24px;
   }
 }

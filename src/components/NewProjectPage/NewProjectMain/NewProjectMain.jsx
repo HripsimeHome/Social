@@ -1,6 +1,7 @@
 import styles from "./NewProjectMain.module.scss";
 import ProjectCategoryList from "../../global/ProjectCategoryList/ProjectCategoryList";
-import React, { useEffect, useState } from "react";
+import CurrencyDataPanel from "../../layout/CurrencyDataPanel/CurrencyDataPanel";
+import React, { useEffect, useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { homePagePath } from "../../../router/path";
 
@@ -31,35 +32,34 @@ const slideData = [
   },
 ];
 
-const currencyData = [
-  {
-    usdtData: 1,
-    usdtText: "Thanks!",
-  },
-  {
-    usdtData: 11,
-    usdtText: "0.015%",
-  },
-  {
-    usdtData: 111,
-    usdtText: "0.25%",
-  },
-  {
-    usdtData: 1111,
-    usdtText: "2.55%",
-  },
-];
 
 const NewProjectMain = ({ formData, setFormData }) => {
   const navigate = useNavigate();
   const [currentIndex, setCurrentIndex] = useState(0);
   const [publishEnable, setPublishEnable] = useState(false);
 
+  const swiperRef = useRef(null);
+  const nextButtonRef = useRef(null);
+  const prevButtonRef = useRef(null);
+
   useEffect(() => {
     if (currentIndex === slideData.length - 1) {
       setPublishEnable(true);
     }
   }, [currentIndex]);
+
+  useEffect(() => {
+    if (swiperRef.current && swiperRef.current.swiper) {
+      const swiperInstance = swiperRef.current.swiper;
+
+      if (typeof swiperInstance.params.navigation === "object") {
+        swiperInstance.params.navigation.nextEl = nextButtonRef.current;
+        swiperInstance.params.navigation.prevEl = prevButtonRef.current;
+        swiperInstance.navigation.init();
+        swiperInstance.navigation.update();
+      }
+    }
+  }, []);
 
   const onChange = (e) => {
     setFormData((prevState) => ({
@@ -69,8 +69,7 @@ const NewProjectMain = ({ formData, setFormData }) => {
   };
 
   return (
-    <section className={styles.newProjectMain}>
-      {/* Category List - Visible Only on First Slide */}
+    <section className={styles.newProjectMain}>     
       <div
         className={`${styles.newProjectMain__categoryListWrapper} ${
           currentIndex === 0 ? styles.visible : ""
@@ -78,8 +77,7 @@ const NewProjectMain = ({ formData, setFormData }) => {
       >
         <ProjectCategoryList />
       </div>
-
-      {/* Progress Bar */}
+      
       <div className={styles.newProjectMain__trackingLine}>
         <span
           className={styles.newProjectMain__slider}
@@ -88,19 +86,10 @@ const NewProjectMain = ({ formData, setFormData }) => {
       </div>
 
       <div className={styles.newProjectMain__sliderWrapper}>
+        
         {/* Panels displayed on the last slide */}
-        {currentIndex === slideData.length - 1 && (
-          <>
-            {currencyData.map((panel, index) => (
-              <div
-                key={index}
-                className={`${styles.newProjectMain__panelMargin} whitePanel`}
-              >
-                <span>{panel.usdtData} USDT</span>
-                <span className="btnGreen">{panel.usdtText}</span>
-              </div>
-            ))}
-          </>
+          {currentIndex === slideData.length - 1 && (            
+          <CurrencyDataPanel />            
         )}
 
         <div
@@ -111,12 +100,13 @@ const NewProjectMain = ({ formData, setFormData }) => {
           }
         >
           <Swiper
+            ref={swiperRef}
             modules={[Navigation]}
             spaceBetween={20}
             slidesPerView={1}
             navigation={{
-              nextEl: ".btnNext",
-              prevEl: ".btnPrev",
+              nextEl: nextButtonRef.current,
+              prevEl: prevButtonRef.current,
             }}
             loop={false}
             onSlideChange={(swiper) => {
@@ -140,17 +130,19 @@ const NewProjectMain = ({ formData, setFormData }) => {
       </div>
 
       <div className="greenPanel">
-        <button className="btnPrev">
+        <button ref={prevButtonRef} className={`btnPrev`}>
           {`${currentIndex > 0 ? "BACK " : ""}${currentIndex + 1}/5`}
         </button>
 
         {currentIndex !== slideData.length - 1 ? (
-          <button className="btnNext btnGradientGreen">{"NEXT"}</button>
+          <button ref={nextButtonRef} className={`btnNext btnGradientGreen`}>
+            {"NEXT"}
+          </button>
         ) : (
           <button
             disabled={!publishEnable}
             onClick={() => navigate(homePagePath)}
-            className=" btnGradientGreen"
+            className="btnGradientGreen"
           >
             {"PUBLIC"}
           </button>
