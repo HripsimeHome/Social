@@ -104,20 +104,23 @@
     background-color: $color-black;
     cursor: pointer;
     border-radius: 50px;
-    margin-right: 27px;
+    margin-right: 27px;   
 
-    Svg {
+/*
+  Svg {
       width: 9px;
       height: 14px;
     }
+*/
 
     &:active {
       transform: translateY(1px);
-    }
-
- 
+    } 
   }
 
+  &__btnIcon {
+    @include svg(14px, $color-white);
+  }
 
 
   &__category {

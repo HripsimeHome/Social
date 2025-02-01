@@ -63,7 +63,8 @@ const Header = () => {
             <div className={styles.header__logoWrapper}>
               {location.pathname !== homePagePath && (
                 <Link to={-1} className={styles.header__backBtn}>
-                  <Svg id={arrowPrevIcon} />
+                  <Svg id={arrowPrevIcon} 
+                    className={styles.header__btnIcon}/>
                 </Link>
               )}
               <div className={styles.header__logoContainer}>
