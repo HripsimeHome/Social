@@ -3,6 +3,11 @@ import { NavLink } from "react-router-dom";
 import { menuItems } from "../../../constants/menuItems";
 import { avatarImage } from "../../../assets/images";
 
+
+import {    
+  homePagePath
+} from "../../../router/path";
+
 const Navbar = () => {
   return (
     <div className={styles.navbar}>     
@@ -20,12 +25,31 @@ const Navbar = () => {
               className={({ isActive }) =>
                 `${styles.navbar__menuLink} 
                  ${isActive ? styles.navbar__menuLink_active : ""} 
-                 ${text === "CROW" ? styles.navbar__crow : ""}`
+                 ${text === "CROW" ? styles.navbar__crow : ""}
+                ${isActive && link === homePagePath ? styles.navbar__menuLink_active : ""}`
               }
             >
+              
               {text}
             </NavLink>
           ))}
+
+{/*
+<NavLink
+            to={link}
+            key={index}  
+            end={link === homePagePath} // Ensures "/" is only active when exactly on home
+            className={({ isActive }) =>
+              `${styles.navbar__menuLink} 
+               ${isActive ? styles.navbar__menuLink_active : ""} 
+               ${text === "CROW" ? styles.navbar__crow : ""}`
+            }
+          >
+            {text}
+          </NavLink>
+          */}
+
+
         </nav>      
     </div>
   );
