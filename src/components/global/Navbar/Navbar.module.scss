@@ -8,8 +8,8 @@
   @include mdScreenMedia {       
     width: 100%;     
     order: 2;
-    padding-top: 24px;
-   // padding-bottom: 12px;
+   // padding-top: 24px;
+   padding-bottom: 12px;
   }
 
   &__avatarImg {
@@ -38,7 +38,7 @@
 
     @include smScreenMedia {
       margin: 0;
-      gap: 10px;
+      gap: 11px;
     }  
   }
 
@@ -49,6 +49,7 @@
     &:hover,
     &_active {
       color: $color-white;
+      
     }
 
     @include smScreenMedia {
@@ -58,10 +59,11 @@
   }
 
   &__crow {
+    color: $color-white;
     background-color: rgba(255, 255, 255, 0.05);
     backdrop-filter: blur(30px);
     -webkit-backdrop-filter: blur(30px);   
     border-radius: 10px;
-    padding: 4px 13px;
+    padding: 4px 13px;    
   }
 }

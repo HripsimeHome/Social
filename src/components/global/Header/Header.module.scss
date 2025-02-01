@@ -8,31 +8,36 @@
   width: 100%;
   transition: $transition;
   z-index: 1;
-  padding-top: 78px;
-  padding-bottom: 60px;
+  //padding-top: 78px;
+  //padding-bottom: 60px;
 
-  /*
-   height: 101px;
+  
+   //height: 101px;
    padding-top: 30px;
   @include bgWebp(
     "../assets/images/header/headerBg.png",
     "../assets/images/header/headerBg.webp"
   );
   background: no-repeat center top;
-  background-color: #010c10;
-*/
+  //background-color: #010c10;
+ 
+
 
   @include xlScreenMedia {
     //padding: 3% 20px;
-    padding: 1% 0;
+    padding: 2% 0;
   }
 
   @include mdScreenMedia {
-    padding: 3% 0;
+    padding: 3% 0 0;
+  }
+
+  @include smScreenMedia {
+    margin: 1% 0 0;
   }
 
   &.scrolled {
-    background-color: #0c1c22;
+   // background-color: #0c1c22;
     //padding-top: 20px;
     //padding-bottom: 20px;
   }
