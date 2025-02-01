@@ -5,7 +5,7 @@ const ProjectStatusLabel = () => {
 
   const labels = ["new", "top", "popular"];  
   const [currentLabelIndex, setCurrentLabelIndex] = useState(0);
- 
+
   useEffect(() => {
     const intervalId = setInterval(() => {
       setCurrentLabelIndex((prevIndex) => (prevIndex + 1) % labels.length);
@@ -18,8 +18,8 @@ const ProjectStatusLabel = () => {
   return (
     <>
       <div className="labelPin"> 
-       <span>{labels[currentLabelIndex]}</span>
-      {/* <span>new</span>*/}
+        <span>{labels[currentLabelIndex]}</span>
+     {/* <span>new</span>*/}
       </div>     
     </>
   );
