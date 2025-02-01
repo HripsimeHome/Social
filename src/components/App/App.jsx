@@ -1,5 +1,6 @@
 import Header from "../global/Header/Header";
 import AppRouter from "../../router/AppRouter";
+import FooterMenu from "../../components/global/FooterMenu/FooterMenu"
 
 function App() {
   return (
@@ -8,6 +9,7 @@ function App() {
       <div className="container">
         <AppRouter />
       </div>
+      <FooterMenu />
     </>
   );
 }

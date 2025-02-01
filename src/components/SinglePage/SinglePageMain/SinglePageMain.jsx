@@ -1,6 +1,7 @@
 import styles from "./SinglePageMain.module.scss";
 import ProgressBarFunding from "../../layout/ProgressBarFunding/ProgressBarFunding";
 import CurrencyPrice from "../../layout/CurrencyPrice/CurrencyPrice";
+import CurrencyDataPanel from "../../layout/CurrencyDataPanel/CurrencyDataPanel"
 
 import {
   profilePhoto1Image,
@@ -77,11 +78,15 @@ const SinglePageMain = () => {
             </div>
           ))}
 
-          <div className="greenPanel">
+        <div className="greenPanel">
             <span>1111 USDT</span>
             <span className="btnGreen">2.55%</span>
           </div>
         </div>
+
+
+        {/* <CurrencyDataPanel />*/}
+        
       </section>
     </>
   );

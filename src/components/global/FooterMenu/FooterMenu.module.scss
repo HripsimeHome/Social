@@ -1,0 +1,45 @@
+@import "../../../styles/mixins";
+@import "../../../styles/vars";
+
+.footerMenu {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%; 
+  display: none;
+  background-color: #010c10;
+  padding: 14px 0 16px;  
+
+  @include mdScreenMedia {
+    @include flexCol(space-around);
+    
+  }
+
+  &__btn {
+    cursor: pointer;
+    background: transparent;
+    border: none;
+
+    &_active {
+      svg {
+        fill: rgb(34, 180, 150);
+      }
+    }
+  }
+
+  &__btnImg {
+    @include svg(20px, $color-white);
+
+    &:hover {
+      fill: rgb(199, 254, 98);
+      cursor: pointer;
+    }
+
+    &_active {
+      svg {
+        fill: rgb(34, 180, 150);
+      }
+    }
+  }
+ 
+}
