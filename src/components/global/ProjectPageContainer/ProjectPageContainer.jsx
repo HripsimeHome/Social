@@ -1,12 +1,14 @@
 import styles from "./ProjectPageContainer.module.scss";
 import { useLocation } from "react-router-dom";
-import ProjectPageDashboard from "../ProjectPageDashboard/ProjectPageDashboard";
+import DeskAboutProject from "./DeskAboutProject/DeskAboutProject";
+import DeskFunding from "./DeskFunding/DeskFunding";
 import SinglePageMain from "../../SinglePage/SinglePageMain/SinglePageMain";
 import NewProjectPageMain from "../../NewProjectPage/NewProjectMain/NewProjectMain";
 
-import { singlePagePath, newProjectPagePath } from "../../../router/path";
-import DeskAboutProject from "../ProjectPageDashboard/DeskAboutProject/DeskAboutProject";
-import DeskFunding from "../ProjectPageDashboard/DeskFunding/DeskFunding";
+import {
+   singlePagePath,
+   newProjectPagePath
+} from "../../../router/path";
 
 const ProjectPageContainer = ({ formData, setFormData }) => {
   const location = useLocation();
