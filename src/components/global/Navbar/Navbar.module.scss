@@ -46,24 +46,33 @@
     @include setFont(16px, 500, $font-family, $color-grey50);
     text-decoration: none;
 
-    &:hover,
-    &_active {
-      color: red;
-      
+    &:hover {
+      color: $color-white;    
+      cursor: pointer;  
+    }
+    
+    &_active {         
+      cursor: default; 
+      //cursor: default !important; 
     }
 
     @include smScreenMedia {
       @include setFont(13px, 500, $font-family, $color-grey50);
     }
-
   }
 
   &__crow {
     color: $color-white;
-    background-color: rgba(255, 255, 255, 0.05);
+    cursor: default;
+    background-color: $color-white05;
     backdrop-filter: blur(30px);
     -webkit-backdrop-filter: blur(30px);   
     border-radius: 10px;
     padding: 4px 13px;    
+    &:hover {
+      color: $color-grey50;    
+      cursor: pointer;  
+    }
+  
   }
 }
