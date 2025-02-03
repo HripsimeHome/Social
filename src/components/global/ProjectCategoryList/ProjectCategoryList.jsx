@@ -45,9 +45,10 @@ const ProjectCategoryList = () => {
         <ul className={styles.projectCategoryList__categoryList}>
           {categoriesList.map((item, index) => (
           <li key={index}>
-            <input type="checkbox" /> {item}
-          </li>
-        ))}
+            <input type="checkbox" />
+            <span>{item}</span>
+          </li>          
+          ))}
         </ul>
         <button
           onClick={toggleCategory}
