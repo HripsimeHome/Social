@@ -3,7 +3,7 @@ import styles from "./PositionMain.module.scss";
 const PositionMain = () => {
   return (
     <>
-      <section className={styles.musicMain}>Position</section>
+      <section className={styles.PositionMainositionMain}>Position</section>
     </>
   );
 };
