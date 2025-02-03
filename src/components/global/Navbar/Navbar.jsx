@@ -1,5 +1,5 @@
 import styles from "./Navbar.module.scss";
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 import { menuItems } from "../../../constants/menuItems";
 import { avatarImage } from "../../../assets/images";
 
@@ -9,6 +9,10 @@ import {
 } from "../../../router/path";
 
 const Navbar = () => {
+ 
+  const location = useLocation();
+ const isHomePage = location.pathname === homePagePath;
+
   return (
     <div className={styles.navbar}>     
         <img
@@ -26,7 +30,7 @@ const Navbar = () => {
                 `${styles.navbar__menuLink} 
                  ${isActive ? styles.navbar__menuLink_active : ""} 
                  ${text === "CROW" ? styles.navbar__crow : ""}
-                ${isActive && link === homePagePath ? styles.navbar__menuLink_active : ""}`
+                ${isActive && location === homePagePath ? styles.navbar__menuLink_active : ""}`
               }
             >
               
