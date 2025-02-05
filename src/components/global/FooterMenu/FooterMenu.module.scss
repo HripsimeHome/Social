@@ -8,11 +8,11 @@
   width: 100%; 
   display: none;
   background-color: #010c10;
-  padding: 14px 0 16px;  
+  padding: 8px 0 16px;  
 
   @include mdScreenMedia {
-    @include flexCol(space-around);
-    
+    @include flexCol(space-evenly, baseline);
+     
   }
 
   &__btn {
@@ -41,5 +41,13 @@
       }
     }
   }
- 
+
+  &__plusAnim {
+    width: 45px;
+    height: 45px;
+  } 
+
+  &__switchText {
+    @include setFont(14px, 500, $font-family, $color-white);
+  }
 }
