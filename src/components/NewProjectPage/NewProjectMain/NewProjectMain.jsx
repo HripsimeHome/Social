@@ -32,7 +32,6 @@ const slideData = [
   },
 ];
 
-
 const NewProjectMain = ({ formData, setFormData }) => {
   const navigate = useNavigate();
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -69,7 +68,7 @@ const NewProjectMain = ({ formData, setFormData }) => {
   };
 
   return (
-    <section className={styles.newProjectMain}>     
+    <section className={styles.newProjectMain}>
       <div
         className={`${styles.newProjectMain__categoryListWrapper} ${
           currentIndex === 0 ? styles.visible : ""
@@ -77,7 +76,7 @@ const NewProjectMain = ({ formData, setFormData }) => {
       >
         <ProjectCategoryList />
       </div>
-      
+
       <div className={styles.newProjectMain__trackingLine}>
         <span
           className={styles.newProjectMain__slider}
@@ -86,11 +85,8 @@ const NewProjectMain = ({ formData, setFormData }) => {
       </div>
 
       <div className={styles.newProjectMain__sliderWrapper}>
-        
         {/* Panels displayed on the last slide */}
-          {currentIndex === slideData.length - 1 && (            
-          <CurrencyDataPanel />            
-        )}
+        {currentIndex === slideData.length - 1 && <CurrencyDataPanel />}
 
         <div
           className={
@@ -115,13 +111,19 @@ const NewProjectMain = ({ formData, setFormData }) => {
           >
             {slideData.map((slide, index) => (
               <SwiperSlide key={index}>
-                <input
-                  name={slide.key}
-                  value={formData[slide.key]}
-                  onChange={onChange}
-                  type="text"
-                  placeholder={slide.placeholder}
-                />
+                <div class={styles.newProjectMain__inputWrapper}>
+                  <span class={styles.newProjectMain__inputPlaceHolder}>
+                    {slide.placeholder}
+                  </span>
+                  <input
+                    name={slide.key}
+                    value={formData[slide.key]}
+                    onChange={onChange}
+                    type="text"
+                    placeholder={slide.placeholder}
+                  />
+                </div>
+
                 <p>{slide.description}</p>
               </SwiperSlide>
             ))}
@@ -130,12 +132,15 @@ const NewProjectMain = ({ formData, setFormData }) => {
       </div>
 
       <div className="greenPanel">
-        <button ref={prevButtonRef} className={`btnPrev`}>
+        <button ref={prevButtonRef} className={styles.newProjectMain__btnPrev}>
           {`${currentIndex > 0 ? "BACK " : ""}${currentIndex + 1}/5`}
         </button>
 
         {currentIndex !== slideData.length - 1 ? (
-          <button ref={nextButtonRef} className={`btnNext btnGradientGreen`}>
+          <button
+            ref={nextButtonRef}
+            className={`${styles.newProjectMain__btnPrev} btnGradientGreen`}
+          >
             {"NEXT"}
           </button>
         ) : (
