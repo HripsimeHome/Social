@@ -10,7 +10,7 @@ import {
 
 const Navbar = () => {
  
-  const location = useLocation();
+const location = useLocation();
  const isHomePage = location.pathname === homePagePath;
 
   return (

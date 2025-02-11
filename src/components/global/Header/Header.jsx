@@ -80,7 +80,7 @@ const Header = () => {
                 */}
                 <span className={`${isHomePage ? styles.header__logo_lg : ""} ${
                     styles.header__logo
-                  }`}>{logoText}</span>
+                  }`}>{logoText}</span>  
 
                 {isSinglePage && (
                   <span className={styles.header__category}>video game</span>
@@ -90,7 +90,7 @@ const Header = () => {
 
             <Navbar />
 
-            <Link to={newProjectPagePath} className={styles.header__menuBtn}>
+         {}   <Link to={newProjectPagePath} className={styles.header__menuBtn}>
               +
             </Link>
           </div>

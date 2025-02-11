@@ -73,6 +73,11 @@
       color: $color-grey50;    
       cursor: pointer;  
     }
+
+    // Удалить 
+    @include mdScreenMedia {
+      display: none;;
+    }
   
   }
 }
