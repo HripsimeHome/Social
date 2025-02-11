@@ -45,13 +45,14 @@ a {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  margin-bottom: 55px;;
 }
 
 .container {
   max-width: 1100px;
   width: 100%;
   //margin: 190px auto 50px;
-  margin: 0 auto 45px;
+  margin: 0 auto;
   //padding-top: 210px;
 
   //padding-right: 100px;
@@ -102,7 +103,7 @@ a {
     @include setFont(14px, 700, $font-family, $color-lightGreen);
   }
 
-  // Button panel: white; Light green
+  // Button panels: white; Light green
 
   .btnPanelContainer {
     @include flexCol(space-between);

@@ -72,6 +72,7 @@
 
     @include mdScreenMedia {
       order: 1;
+      display: none;;
     }
 
     &:active {
@@ -82,6 +83,11 @@
   &__logoWrapper {
     @include flexCol(flex-start, flex-start);
     flex: 1;
+
+     // Удалить 
+     @include mdScreenMedia {
+      justify-content: center;
+    }
   }
 
   &__logoContainer {
@@ -110,6 +116,11 @@
     cursor: pointer;
     border-radius: 50px;
     margin-right: 27px;   
+
+     // Удалить 
+     @include mdScreenMedia {
+      display: none;;
+    }
 
 /*
   Svg {

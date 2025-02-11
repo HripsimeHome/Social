@@ -11,8 +11,12 @@
   padding: 8px 0 16px;  
 
   @include mdScreenMedia {
-    @include flexCol(space-evenly, baseline);
-     
+    @include flexCol(space-evenly, baseline);     
+  }
+
+  &__container {
+   @include flexCol();
+   gap: 60px;
   }
 
   &__btn {
@@ -27,8 +31,8 @@
     }
   }
 
-  &__btnImg {
-    @include svg(20px, $color-white);
+  &__iconMenu {
+    @include svg(23px, $color-white);
 
     &:hover {
       fill: rgb(199, 254, 98);
@@ -50,4 +54,32 @@
   &__switchText {
     @include setFont(14px, 500, $font-family, $color-white);
   }
+
+
+
+  &__plusBtn {
+    width: 27px;
+    height: 27px;
+    @include flexCol();
+    @include setFont(24px, 500, $font-family, $color-white);
+    cursor: pointer;
+    background-color: #13343b;
+  // background-color: green !important;
+    border-radius: 50%;
+    margin-top: -4px;;
+    order: 2;
+
+    @include lgScreenMedia {
+      margin-left: auto;
+    }
+
+    @include mdScreenMedia {
+      order: 1;
+    }
+
+    &:active {
+      transform: translateY(1px);
+    }
+  }
+
 }
