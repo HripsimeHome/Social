@@ -31,7 +31,7 @@ const Footer = () => {
         </div> 
 
         <div>
-          <a href="https://coino-rust.vercel.app">
+          <a href="https://crypto-tg-bot.vercel.app/">
             <Lottie
               animationData={plusAnim}
               loop={true}
