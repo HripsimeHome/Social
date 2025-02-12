@@ -38,7 +38,7 @@ const Footer = () => {
               className={styles.footerMenu__plusAnim}
           />              
             <span className={styles.footerMenu__switchText}>
-              STAKE
+             FUND 
             </span>
           </a>   
         </div>
