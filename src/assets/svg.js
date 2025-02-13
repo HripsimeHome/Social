@@ -1,4 +1,6 @@
 export const arrowPrevIcon = "arrowPrev";
+export const addPhotoIcon = "addPhoto"
+export const editPhotoIcon = "editPhoto"
 
 // Footer
 export const futuresIcon = "futures";

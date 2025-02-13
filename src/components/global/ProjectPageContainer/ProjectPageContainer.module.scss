@@ -4,9 +4,11 @@
 .projectPageContainer {     
   display: flex; 
   margin-top: 16px;
+  justify-content: center;
 
   @include mdScreenMedia {
     flex-direction: column;
+    display: grid; 
   }
   
   &__dashboardContainer  {

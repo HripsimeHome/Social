@@ -3,7 +3,7 @@ import headerBgWebpImage from "./images/header/headerBg.webp";
 
 // Home
 
-import avatarImage from "./images/header/avatar.jpg";
+import avatarImage from "./images/header/avatar.png";
 
 import videogame1Image from "./images/home/videogame1.jpg"
 import videogame1WebpImage from "./images/home/videogame1.webp"

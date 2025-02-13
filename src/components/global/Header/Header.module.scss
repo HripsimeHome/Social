@@ -8,32 +8,29 @@
   width: 100%;
   transition: $transition;
   z-index: 1;
-  //padding-top: 78px;
-  //padding-bottom: 60px;
-
+  padding: 30px 0 25px; 
   
    //height: 101px;
-   padding-top: 30px;
+
   @include bgWebp(
     "../assets/images/header/headerBg.png",
     "../assets/images/header/headerBg.webp"
   );
   background: no-repeat center top;
-  //background-color: #010c10;
- 
+  //background-color: #010c10; 
 
 
   @include xlScreenMedia {
     //padding: 3% 20px;
-    padding: 2% 0;
+   // padding: 2% 0;
   }
 
   @include mdScreenMedia {
-    padding: 3% 0 0;
+    padding: 10px 0 0;
   }
 
   @include smScreenMedia {
-    margin: 1% 0 0;
+   // margin: 1% 0 0;
   }
 
   &.scrolled {
@@ -43,6 +40,7 @@
   }
   &__container {
     @include flexCol(space-between);
+    
 
     @include lgScreenMedia {
       //justify-content: flex-start;
@@ -99,11 +97,10 @@
 
   &__logo {
     @include setFont(22px, 800, $font-family, $color-primary);
-    order: 0;
-    margin-bottom: 5px;
+    order: 0;    
 
     &_lg {
-      font-size: 32px;
+      font-size: 32px;  
     }
   }
 
@@ -142,5 +139,6 @@
   &__category {
     @include setFont(12px, 800, $font-family, $color-grey80);
     text-transform: uppercase;
+    margin-top: 5px;
   }
 }
