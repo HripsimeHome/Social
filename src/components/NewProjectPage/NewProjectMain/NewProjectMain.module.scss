@@ -21,11 +21,18 @@
     transition: width 0.3s ease-in-out;
   }
 
+  &__categoryListContainer {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+  }
+
   &__categoryListWrapper {
     height: 40px;
     visibility: hidden;
 
     &.visible {
+      width: 100%;
       height: 40px;
       visibility: visible;
     }
@@ -39,6 +46,13 @@
   &__hideSwiper {
     display: none;
   }
+
+  &__addPhotoIcon {
+    // @include svg(54px, $color-white);
+    width: 35px;
+     height: 30px;   
+     //fill: white;
+   }
 
   &__inputWrapper {
     position: relative;
@@ -84,4 +98,6 @@
       font-weight: bold;
     }
   }
+
+ 
 }

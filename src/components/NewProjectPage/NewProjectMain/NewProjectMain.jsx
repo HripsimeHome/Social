@@ -8,6 +8,9 @@ import { homePagePath } from "../../../router/path";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
 import "swiper/css";
+import Svg from "../../layout/Svg/Svg"
+
+import {addPhotoIcon, editPhotoIcon} from "../../../assets/svg"
 
 const slideData = [
   {
@@ -69,13 +72,37 @@ const NewProjectMain = ({ formData, setFormData }) => {
 
   return (
     <section className={styles.newProjectMain}>
-      <div
-        className={`${styles.newProjectMain__categoryListWrapper} ${
-          currentIndex === 0 ? styles.visible : ""
+
+     
+<div className={styles.newProjectMain__categoryListContainer}> 
+      <div className={`
+        ${styles.newProjectMain__categoryListWrapper} 
+        ${ currentIndex === 0 ? styles.visible : ""
         }`}
       >
         <ProjectCategoryList />
+
       </div>
+
+      <div>
+
+
+      <Svg
+        id={addPhotoIcon}
+        className={styles.newProjectMain__addPhotoIcon} />
+
+      {/* <Svg
+        id={editPhotoIcon}
+        className={styles.newProjectMain__addPhotoIcon} />
+         */}
+      </div>
+
+</div>
+
+
+
+
+
 
       <div className={styles.newProjectMain__trackingLine}>
         <span

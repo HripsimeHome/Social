@@ -3,7 +3,6 @@ import { NavLink, useLocation } from "react-router-dom";
 import { menuItems } from "../../../constants/menuItems";
 import { avatarImage } from "../../../assets/images";
 
-
 import {    
   homePagePath
 } from "../../../router/path";
